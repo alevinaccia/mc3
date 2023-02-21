@@ -11,6 +11,9 @@
 		C0109E03299E43850075F6D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E02299E43850075F6D1 /* ContentView.swift */; };
 		C0109E05299E43870075F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
 		C0109E08299E43870075F6D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E07299E43870075F6D1 /* Preview Assets.xcassets */; };
+		C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBA29A4C14100DE5B28 /* searchTrip.swift */; };
+		C085DEBD29A4C2D000DE5B28 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBC29A4C2D000DE5B28 /* tripCard.swift */; };
+		C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,10 @@
 		C0109E02299E43850075F6D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0109E04299E43870075F6D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0109E07299E43870075F6D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C016013C29A3896E006CE923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C085DEBA29A4C14100DE5B28 /* searchTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTrip.swift; sourceTree = "<group>"; };
+		C085DEBC29A4C2D000DE5B28 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCard.swift; sourceTree = "<group>"; };
+		C09DF9E9299F74E3007EE4FD /* apiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 		C0109DFF299E43850075F6D1 /* mc3 */ = {
 			isa = PBXGroup;
 			children = (
+				C016013C29A3896E006CE923 /* Info.plist */,
 				C0109E00299E43850075F6D1 /* mc3App.swift */,
 				C0109E10299E46690075F6D1 /* viewmodel */,
 				C0109E0F299E46610075F6D1 /* model */,
@@ -73,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				C0109E02299E43850075F6D1 /* ContentView.swift */,
+				C085DEBC29A4C2D000DE5B28 /* tripCard.swift */,
+				C085DEBA29A4C14100DE5B28 /* searchTrip.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -87,6 +97,7 @@
 		C0109E10299E46690075F6D1 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				C09DF9E9299F74E3007EE4FD /* apiController.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -161,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
+				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				C0109E01299E43850075F6D1 /* mc3App.swift in Sources */,
+				C085DEBD29A4C2D000DE5B28 /* tripCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +308,7 @@
 				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mc3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +338,7 @@
 				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mc3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

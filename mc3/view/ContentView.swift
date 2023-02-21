@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let controller : ApiController = ApiController()
+    @State var firstStation : statNameCode = statNameCode()
+    @State var secondStation : statNameCode = statNameCode()
+    @State var possibileTrips : [TrainStatus] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        searchTrip(firstStation: $firstStation, secondStation: $secondStation, possibleTrips: $possibileTrips)
+        List(possibileTrips, id : \.self) { trip in
+            Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
+                print(trip)
+            }
         }
-        .padding()
+        
     }
 }
 
