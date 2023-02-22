@@ -15,6 +15,9 @@ struct ContentView: View {
     @State var possibileTrips : [TrainStatus] = []
     
     var body: some View {
+        NavigationView{
+            
+        }.navigationTitle("Train Station")
         searchTrip(firstStation: $firstStation, secondStation: $secondStation, possibleTrips: $possibileTrips)
         List(possibileTrips, id : \.self) { trip in
             Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {

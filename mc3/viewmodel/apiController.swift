@@ -59,7 +59,7 @@ struct TrainStatus: Decodable, Hashable {
     
     mutating func setTime(station : String){
         for stop in self.stops {
-            if stop.station == station {
+            if stop.stationCode == station {
                 self.timeAtMyStation = stop.departTime
                 break
             }
@@ -177,9 +177,10 @@ class ApiController {
             let departures = try JSONDecoder().decode([testStruct].self, from: data)
             
             for departure in departures {
-                let train : TrainStatus = try await getTrainStatus(trainInfo: await getTrainInfo(code: departure.trainCode)!, code: departure.trainCode)
+                var train : TrainStatus = try await getTrainStatus(trainInfo: await getTrainInfo(code: departure.trainCode)!, code: departure.trainCode)
                 
                 if train.stops.contains(where: {$0.stationCode ==  to}) && train.stops.firstIndex(where: {$0.stationCode == to})! > train.stops.firstIndex(where: {$0.stationCode == from})! && !train.departed {
+                    train.setTime(station: to)
                     trips.append(train)
                 }
             }

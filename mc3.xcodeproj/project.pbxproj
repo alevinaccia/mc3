@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B863D3229A4E2B800B606AE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3129A4E2B800B606AE /* Trip.swift */; };
+		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
+		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		C0109E01299E43850075F6D1 /* mc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E00299E43850075F6D1 /* mc3App.swift */; };
 		C0109E03299E43850075F6D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E02299E43850075F6D1 /* ContentView.swift */; };
 		C0109E05299E43870075F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B863D3129A4E2B800B606AE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trip.swift; path = mc3/view/Trip.swift; sourceTree = SOURCE_ROOT; };
+		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
+		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
 		C0109DFD299E43850075F6D1 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0109E00299E43850075F6D1 /* mc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mc3App.swift; sourceTree = "<group>"; };
 		C0109E02299E43850075F6D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B863D3629A60F9200B606AE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B863D3729A60FAB00B606AE /* View+Shape.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		C0109DF4299E43850075F6D1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +72,7 @@
 		C0109DFF299E43850075F6D1 /* mc3 */ = {
 			isa = PBXGroup;
 			children = (
+				3B863D3629A60F9200B606AE /* utils */,
 				C016013C29A3896E006CE923 /* Info.plist */,
 				C0109E00299E43850075F6D1 /* mc3App.swift */,
 				C0109E10299E46690075F6D1 /* viewmodel */,
@@ -83,6 +98,7 @@
 				C0109E02299E43850075F6D1 /* ContentView.swift */,
 				C085DEBC29A4C2D000DE5B28 /* tripCard.swift */,
 				C085DEBA29A4C14100DE5B28 /* searchTrip.swift */,
+				3B863D3929A6370800B606AE /* tripCardEmpty.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -90,6 +106,7 @@
 		C0109E0F299E46610075F6D1 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				3B863D3129A4E2B800B606AE /* Trip.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -172,11 +189,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B863D3229A4E2B800B606AE /* Trip.swift in Sources */,
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				C0109E01299E43850075F6D1 /* mc3App.swift in Sources */,
 				C085DEBD29A4C2D000DE5B28 /* tripCard.swift in Sources */,
+				3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */,
+				3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
