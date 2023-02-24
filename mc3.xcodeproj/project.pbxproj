@@ -10,6 +10,8 @@
 		3B863D3229A4E2B800B606AE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3129A4E2B800B606AE /* Trip.swift */; };
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
+		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
+		3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3D29A783CD00B606AE /* SearchBar.swift */; };
 		C0109E01299E43850075F6D1 /* mc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E00299E43850075F6D1 /* mc3App.swift */; };
 		C0109E03299E43850075F6D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E02299E43850075F6D1 /* ContentView.swift */; };
 		C0109E05299E43870075F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		3B863D3129A4E2B800B606AE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trip.swift; path = mc3/view/Trip.swift; sourceTree = SOURCE_ROOT; };
 		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
+		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
+		3B863D3D29A783CD00B606AE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C0109DFD299E43850075F6D1 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0109E00299E43850075F6D1 /* mc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mc3App.swift; sourceTree = "<group>"; };
 		C0109E02299E43850075F6D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,10 +99,12 @@
 		C0109E0E299E46510075F6D1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C085DEBA29A4C14100DE5B28 /* searchTrip.swift */,
 				C0109E02299E43850075F6D1 /* ContentView.swift */,
 				C085DEBC29A4C2D000DE5B28 /* tripCard.swift */,
-				C085DEBA29A4C14100DE5B28 /* searchTrip.swift */,
 				3B863D3929A6370800B606AE /* tripCardEmpty.swift */,
+				3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */,
+				3B863D3D29A783CD00B606AE /* SearchBar.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				C0109E01299E43850075F6D1 /* mc3App.swift in Sources */,
 				C085DEBD29A4C2D000DE5B28 /* tripCard.swift in Sources */,
+				3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */,
+				3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */,
 				3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */,
 				3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */,
 			);

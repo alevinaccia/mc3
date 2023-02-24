@@ -8,23 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    let controller : ApiController = ApiController()
-    @State var firstStation : statNameCode = statNameCode()
-    @State var secondStation : statNameCode = statNameCode()
-    @State var possibileTrips : [TrainStatus] = []
+    @State private var showingSheet = false
     
     var body: some View {
-        NavigationView{
-            
-        }.navigationTitle("Train Station")
-        searchTrip(firstStation: $firstStation, secondStation: $secondStation, possibleTrips: $possibileTrips)
-        List(possibileTrips, id : \.self) { trip in
-            Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
-                print(trip)
+
+        NavigationView(){
+            VStack{
+                Text("Ciao")
+            }
+            .navigationTitle("Train Stations")
+            .toolbar{
+                ToolbarItem{
+                    Button{
+                        
+                        showingSheet.toggle()
+                        
+                    }label: {
+                        Label("Add Item", systemImage: "plus")
+                    }
+                    .sheet(isPresented: $showingSheet) {
+                        tripEditSheetView()
+                    }
+                }
             }
         }
-        
     }
 }
 
