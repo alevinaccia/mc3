@@ -31,7 +31,7 @@ struct TrainStatus: Decodable, Hashable {
     let delay: Int
     let stops : [Stop]
     let departed : Bool
-    var timeAtMyStation : String
+    var timeAtMyStation : Int
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -41,20 +41,17 @@ struct TrainStatus: Decodable, Hashable {
         self.delay = try container.decode(Int.self, forKey: .ritardo)
         self.stops = try container.decode([Stop].self, forKey: .fermate)
         self.departed = try container.decode([String].self, forKey: .compInStazionePartenza).contains(where: {$0 == "Partito"})
-        self.timeAtMyStation = ""
-        
+        self.timeAtMyStation = 0
     }
     
-    init(departStation : String, arrivalStation : String, trainNumber : Int, delay : Int, stops : [Stop], departed : Bool, interestedStation : String) {
+    init(departStation : String, arrivalStation : String, trainNumber : Int, delay : Int, stops : [Stop], departed : Bool, time : Int) {
         self.departStation = departStation
         self.arrivalStation = arrivalStation
         self.trainNumber = trainNumber
         self.delay = delay
         self.stops = stops
         self.departed = departed
-        self.timeAtMyStation = ""
-        
-        setTime(station: interestedStation)
+        self.timeAtMyStation = time
     }
     
     mutating func setTime(station : String){
@@ -65,15 +62,10 @@ struct TrainStatus: Decodable, Hashable {
             }
         }
     }
-    
-    
-    
     func hash(into hasher: inout Hasher) {
        hasher.combine(trainNumber)
      }
 }
-
-
 
 struct Stop: Decodable {
     enum CodingKeys: String, CodingKey {
@@ -81,10 +73,10 @@ struct Stop: Decodable {
     }
     
     let station : String
-    let departTime: String
+    let departTime: Int
     let stationCode : String
     
-    init(station : String, departTime : String, stationCode : String) {
+    init(station : String, departTime : Int, stationCode : String) {
         self.station = station
         self.departTime = departTime
         self.stationCode = stationCode
@@ -95,11 +87,10 @@ struct Stop: Decodable {
         dateFormatter.dateFormat = "HH:mm"
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.station = try container.decode(String.self, forKey: .stazione)
-        self.departTime = dateFormatter.string(from: Date(timeIntervalSince1970: Double(try container.decode(Int.self, forKey : .programmata)/1000)))
+        self.departTime = (try container.decode(Int.self, forKey : .programmata)/1000)
         self.stationCode = try container.decode(String.self, forKey : .id)
     }
 }
-
 
 struct testStruct : Decodable {
     enum CodingKeys: String, CodingKey {
@@ -113,7 +104,6 @@ struct testStruct : Decodable {
         self.trainCode = String(try container.decode(Int.self, forKey: .numeroTreno))
         self.destination = try container.decode(String.self, forKey: .destinazione)
     }
-    
 }
 
 class ApiController {
@@ -180,17 +170,27 @@ class ApiController {
                 var train : TrainStatus = try await getTrainStatus(trainInfo: await getTrainInfo(code: departure.trainCode)!, code: departure.trainCode)
                 
                 if train.stops.contains(where: {$0.stationCode ==  to}) && train.stops.firstIndex(where: {$0.stationCode == to})! > train.stops.firstIndex(where: {$0.stationCode == from})! && !train.departed {
-                    train.setTime(station: to)
-                    trips.append(train)
+                    train.setTime(station: from)
+                    if isDateValid(stoptime : train.timeAtMyStation) {
+                        trips.append(train)
+                    }
+                }
+                
+                if trips.count > 1 {
+                    break
                 }
             }
-            trips.reverse()
             return trips
         }
         catch {
             print(error)
             throw error
         }
+    }
+    
+    func isDateValid(stoptime : Int) -> Bool{
+        let now = Int(Date().timeIntervalSince1970/1000)
+        return stoptime > now
     }
 }
 

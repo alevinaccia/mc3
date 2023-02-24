@@ -12,14 +12,53 @@
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
 		3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3D29A783CD00B606AE /* SearchBar.swift */; };
+		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
+		C00BDD6F29A8CA1D009254A3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */; };
+		C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */; };
+		C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */; };
+		C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7529A8CA1D009254A3 /* MyWidget.swift */; };
+		C00BDD7829A8CA1E009254A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00BDD7729A8CA1E009254A3 /* Assets.xcassets */; };
+		C00BDD7C29A8CA1E009254A3 /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */; };
+		C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */; };
+		C00BDD8A29A8CBBF009254A3 /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */; };
+		C00BDD8B29A8CBC3009254A3 /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7529A8CA1D009254A3 /* MyWidget.swift */; };
+		C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */; };
+		C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */; };
 		C0109E01299E43850075F6D1 /* mc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E00299E43850075F6D1 /* mc3App.swift */; };
 		C0109E03299E43850075F6D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E02299E43850075F6D1 /* ContentView.swift */; };
 		C0109E05299E43870075F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
 		C0109E08299E43870075F6D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E07299E43870075F6D1 /* Preview Assets.xcassets */; };
+		C04CF00929A8CCBD00917586 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3129A4E2B800B606AE /* Trip.swift */; };
+		C04CF00A29A8CCC800917586 /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
 		C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBA29A4C14100DE5B28 /* searchTrip.swift */; };
-		C085DEBD29A4C2D000DE5B28 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBC29A4C2D000DE5B28 /* tripCard.swift */; };
+		C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEC029A77A4400DE5B28 /* tripCard.swift */; };
 		C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C00BDD7A29A8CA1E009254A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0109DF5299E43850075F6D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C00BDD6B29A8CA1D009254A3;
+			remoteInfo = MyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C00BDD8029A8CA1E009254A3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C00BDD7C29A8CA1E009254A3 /* MyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B863D3129A4E2B800B606AE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trip.swift; path = mc3/view/Trip.swift; sourceTree = SOURCE_ROOT; };
@@ -27,6 +66,16 @@
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
 		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
 		3B863D3D29A783CD00B606AE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
+		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetBundle.swift; sourceTree = "<group>"; };
+		C00BDD7529A8CA1D009254A3 /* MyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidget.swift; sourceTree = "<group>"; };
+		C00BDD7729A8CA1E009254A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C00BDD7929A8CA1E009254A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
+		C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 		C0109DFD299E43850075F6D1 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0109E00299E43850075F6D1 /* mc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mc3App.swift; sourceTree = "<group>"; };
 		C0109E02299E43850075F6D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,11 +83,20 @@
 		C0109E07299E43870075F6D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C016013C29A3896E006CE923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C085DEBA29A4C14100DE5B28 /* searchTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTrip.swift; sourceTree = "<group>"; };
-		C085DEBC29A4C2D000DE5B28 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCard.swift; sourceTree = "<group>"; };
+		C085DEC029A77A4400DE5B28 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCard.swift; sourceTree = "<group>"; };
 		C09DF9E9299F74E3007EE4FD /* apiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C00BDD6929A8CA1D009254A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */,
+				C00BDD6F29A8CA1D009254A3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0109DFA299E43850075F6D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,11 +115,52 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		C00BDD6529A8C975009254A3 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C085DEC029A77A4400DE5B28 /* tripCard.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		C00BDD6D29A8CA1D009254A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */,
+				C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C00BDD7229A8CA1D009254A3 /* MyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C00BDD8129A8CA9D009254A3 /* Views */,
+				C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */,
+				C00BDD7529A8CA1D009254A3 /* MyWidget.swift */,
+				C00BDD7729A8CA1E009254A3 /* Assets.xcassets */,
+				C00BDD7929A8CA1E009254A3 /* Info.plist */,
+			);
+			path = MyWidget;
+			sourceTree = "<group>";
+		};
+		C00BDD8129A8CA9D009254A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */,
+				C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C0109DF4299E43850075F6D1 = {
 			isa = PBXGroup;
 			children = (
 				C0109DFF299E43850075F6D1 /* mc3 */,
+				C00BDD7229A8CA1D009254A3 /* MyWidget */,
+				C00BDD6D29A8CA1D009254A3 /* Frameworks */,
 				C0109DFE299E43850075F6D1 /* Products */,
+				C00BDD6529A8C975009254A3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C0109DFD299E43850075F6D1 /* mc3.app */,
+				C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +199,9 @@
 		C0109E0E299E46510075F6D1 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C00BDD6629A8C9BF009254A3 /* tripCard.swift */,
 				C085DEBA29A4C14100DE5B28 /* searchTrip.swift */,
 				C0109E02299E43850075F6D1 /* ContentView.swift */,
-				C085DEBC29A4C2D000DE5B28 /* tripCard.swift */,
 				3B863D3929A6370800B606AE /* tripCardEmpty.swift */,
 				3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */,
 				3B863D3D29A783CD00B606AE /* SearchBar.swift */,
@@ -128,6 +228,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C00BDD6B29A8CA1D009254A3 /* MyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00BDD7D29A8CA1E009254A3 /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */;
+			buildPhases = (
+				C00BDD6829A8CA1D009254A3 /* Sources */,
+				C00BDD6929A8CA1D009254A3 /* Frameworks */,
+				C00BDD6A29A8CA1D009254A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyWidgetExtension;
+			productName = MyWidgetExtension;
+			productReference = C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C0109DFC299E43850075F6D1 /* mc3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0109E0B299E43870075F6D1 /* Build configuration list for PBXNativeTarget "mc3" */;
@@ -135,10 +252,12 @@
 				C0109DF9299E43850075F6D1 /* Sources */,
 				C0109DFA299E43850075F6D1 /* Frameworks */,
 				C0109DFB299E43850075F6D1 /* Resources */,
+				C00BDD8029A8CA1E009254A3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C00BDD7B29A8CA1E009254A3 /* PBXTargetDependency */,
 			);
 			name = mc3;
 			productName = mc3;
@@ -155,6 +274,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					C00BDD6B29A8CA1D009254A3 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					C0109DFC299E43850075F6D1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -174,11 +296,20 @@
 			projectRoot = "";
 			targets = (
 				C0109DFC299E43850075F6D1 /* mc3 */,
+				C00BDD6B29A8CA1D009254A3 /* MyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C00BDD6A29A8CA1D009254A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00BDD7829A8CA1E009254A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0109DFB299E43850075F6D1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,26 +322,106 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C00BDD6829A8CA1D009254A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04CF00929A8CCBD00917586 /* Trip.swift in Sources */,
+				C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */,
+				C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */,
+				C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */,
+				C04CF00A29A8CCC800917586 /* apiController.swift in Sources */,
+				C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0109DF9299E43850075F6D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3B863D3229A4E2B800B606AE /* Trip.swift in Sources */,
+				C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */,
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
+				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
+				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
+				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				C0109E01299E43850075F6D1 /* mc3App.swift in Sources */,
-				C085DEBD29A4C2D000DE5B28 /* tripCard.swift in Sources */,
 				3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */,
 				3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */,
 				3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */,
 				3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */,
+				C00BDD8A29A8CBBF009254A3 /* MyWidgetBundle.swift in Sources */,
+				C00BDD8B29A8CBC3009254A3 /* MyWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C00BDD7B29A8CA1E009254A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C00BDD6B29A8CA1D009254A3 /* MyWidgetExtension */;
+			targetProxy = C00BDD7A29A8CA1E009254A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C00BDD7E29A8CA1E009254A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = self.mc3.MyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C00BDD7F29A8CA1E009254A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = self.mc3.MyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C0109E09299E43870075F6D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,6 +539,7 @@
 		C0109E0C299E43870075F6D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -358,6 +570,7 @@
 		C0109E0D299E43870075F6D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +601,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C00BDD7D29A8CA1E009254A3 /* Build configuration list for PBXNativeTarget "MyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00BDD7E29A8CA1E009254A3 /* Debug */,
+				C00BDD7F29A8CA1E009254A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0109DF8299E43850075F6D1 /* Build configuration list for PBXProject "mc3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
