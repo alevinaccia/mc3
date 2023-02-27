@@ -13,13 +13,25 @@ struct tripEditSheetView: View {
     @State var secondStation : statNameCode = statNameCode()
     @State var possibileTrips : [TrainStatus] = []
     
+    
     var body: some View {
+        
         searchTrip(firstStation: $firstStation, secondStation: $secondStation, possibleTrips: $possibileTrips)
-        List(possibileTrips, id : \.self) { trip in
-            Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
-                print(trip)
+        
+        if !possibileTrips.isEmpty {
+            List(possibileTrips, id : \.self) { trip in
+                Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
+                    print(trip)
+                }
             }
+        } else {
+            //
+            Color.blue
         }
+        
+        
+        iconSelector()
+        Spacer()
     }
 }
 

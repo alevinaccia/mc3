@@ -86,11 +86,14 @@ struct searchTrip: View {
         VStack {
             Text(firstStation.name)
             Text(secondStation.name)
+            
             HStack{
-                Text("da: ")
-                    .foregroundColor(.white)
+                Text("da:")
+                    .foregroundColor(.black)
                     .bold()
-                    .padding()
+                    .frame(minWidth: 30)
+                    .padding(16)
+                    
                 TextField(startingPoint, text: $queryRequestStart,
                           onEditingChanged: { (isBegin) in
                     if isBegin {
@@ -104,9 +107,8 @@ struct searchTrip: View {
                           onCommit: {
                     print("commit")
                 })
-                .bold()
                 .padding()
-                .foregroundColor(.white)
+                .bold()
                 .onChange(of: queryRequestStart) { newValue in
                     if queryRequestStart == "" {
                         searchResult = []
@@ -116,16 +118,22 @@ struct searchTrip: View {
                         searchResult = try await controller.research(query: queryRequestStart)
                     }
                 }
-            }.frame(width: 329, height: 36)
-                .background(RoundedRectangle(cornerRadius: 8).fill(Color("Notte")))
-            
+            }
+            .frame(width: 329, height: 36)
+            //.background(RoundedRectangle(cornerRadius: 8).fill(Color("Notte")))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color("Notte"), lineWidth: 4)
+                )
             
             
             HStack{
-                Text("a: ")
-                    .foregroundColor(.white)
+                Text("a:")
+                    .foregroundColor(.black)
                     .bold()
-                    .padding()
+                    .frame(minWidth: 30)
+                    .padding(16)
+                
                 TextField(endingPoint, text: $queryRequestEnd, onEditingChanged: { (isBegin) in
                     if isBegin {
                         print("Begins editing")
@@ -139,9 +147,8 @@ struct searchTrip: View {
                           onCommit: {
                     print("commit")
                 })
-                .padding()
+                .padding(.leading)
                 .bold()
-                
                 .onChange(of: queryRequestEnd) { newValue in
                     if queryRequestEnd == "" {
                         searchResult = []
@@ -151,33 +158,38 @@ struct searchTrip: View {
                         searchResult = try await controller.research(query: queryRequestEnd)
                     }
                 }
-            }.frame(width: 329, height: 36)
-            .background(RoundedRectangle(cornerRadius: 8).fill(Color("Notte")))
-                
-            
-            List{
-                ForEach(searchResult, id: \.self) { res in
-                    Button {
-                        print(selectedFirstBar)
-                        if (selectedFirstBar == true) {
-                            print("prova")
-                            let format = res.split(separator: "|")
-                            firstStation.name = String(format[0])
-                            firstStation.code = String(format[1])
-                            startingPoint = firstStation.name
-                            queryRequestStart = ""
-                        }else if (selectedSecondBar == true){
-                            let format = res.split(separator: "|")
-                            secondStation.name = String(format[0])
-                            secondStation.code = String(format[1])
-                            queryRequestEnd = ""
-                            endingPoint = secondStation.name
+            }
+            .padding(.trailing)
+            .frame(width: 329, height: 36)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color("Notte"), lineWidth: 4)
+                )
+            if !searchResult.isEmpty {
+                List{
+                    ForEach(searchResult, id: \.self) { res in
+                        Button {
+                            print(selectedFirstBar)
+                            if (selectedFirstBar == true) {
+                                print("prova")
+                                let format = res.split(separator: "|")
+                                firstStation.name = String(format[0])
+                                firstStation.code = String(format[1])
+                                startingPoint = firstStation.name
+                                queryRequestStart = ""
+                            }else if (selectedSecondBar == true){
+                                let format = res.split(separator: "|")
+                                secondStation.name = String(format[0])
+                                secondStation.code = String(format[1])
+                                queryRequestEnd = ""
+                                endingPoint = secondStation.name
+                            }
+                        } label: {
+                            Text(res)
                         }
-                    } label: {
-                        Text(res)
                     }
                 }
-            }
+            } 
             
             
         }.onChange(of: secondStation.name) { newValue in
