@@ -29,7 +29,6 @@ struct tripEditSheetView: View {
 //            }
         } else {
             //non ci sono delle tratte
-            Color.blue
         }
         
         
