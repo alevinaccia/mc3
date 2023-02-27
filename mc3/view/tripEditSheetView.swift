@@ -13,19 +13,22 @@ struct tripEditSheetView: View {
     @State var secondStation : statNameCode = statNameCode()
     @State var possibileTrips : [TrainStatus] = []
     
+    var flagPossibleTrip : Bool = false
     
     var body: some View {
         
         searchTrip(firstStation: $firstStation, secondStation: $secondStation, possibleTrips: $possibileTrips)
         
         if !possibileTrips.isEmpty {
-            List(possibileTrips, id : \.self) { trip in
-                Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
-                    print(trip)
-                }
-            }
+            //ci sono delle tratte tra le due selezionate
+            //flagPossibleTrip = true
+//            List(possibileTrips, id : \.self) { trip in
+//                Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
+//                    print(trip)
+//                }
+//            }
         } else {
-            //
+            //non ci sono delle tratte
             Color.blue
         }
         
