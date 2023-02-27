@@ -165,6 +165,7 @@ struct searchTrip: View {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color("Notte"), lineWidth: 4)
                 )
+            
             if !searchResult.isEmpty {
                 List{
                     ForEach(searchResult, id: \.self) { res in
@@ -189,6 +190,7 @@ struct searchTrip: View {
                         }
                     }
                 }
+                .transition(.slide)
             } 
             
             

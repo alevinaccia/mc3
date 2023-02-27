@@ -27,7 +27,6 @@
 		C00BDD7C29A8CA1E009254A3 /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */; };
 		C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */; };
-		C00BDD8A29A8CBBF009254A3 /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */; };
 		C00BDD8B29A8CBC3009254A3 /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7529A8CA1D009254A3 /* MyWidget.swift */; };
 		C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */; };
 		C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */; };
@@ -453,7 +452,6 @@
 				3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */,
 				3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */,
 				3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */,
-				C00BDD8A29A8CBBF009254A3 /* MyWidgetBundle.swift in Sources */,
 				C00BDD8B29A8CBC3009254A3 /* MyWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

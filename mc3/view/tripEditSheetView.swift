@@ -29,11 +29,12 @@ struct tripEditSheetView: View {
 //            }
         } else {
             //non ci sono delle tratte
+            iconSelector()
+            
         }
         
-        
-        iconSelector()
         Spacer()
+        
     }
 }
 
