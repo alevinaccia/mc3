@@ -17,7 +17,6 @@ struct RoutesView: View {
                 } label: {
                     Text(Image(systemName:"house"))
                 }
-                
                 .background(Color("Tuorlo"))
                 .foregroundColor(Color("Notte"))
                 .clipShape(Circle())
@@ -58,7 +57,7 @@ struct RoutesView: View {
                 .clipShape(Circle())
             }
         }
-        .padding()
+        .padding(.all, 20.0)
         .background(Color("Notte"))
         
     }
