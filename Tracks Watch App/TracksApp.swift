@@ -11,7 +11,7 @@ import SwiftUI
 struct Tracks_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SelectedRouteView()
         }
     }
 }

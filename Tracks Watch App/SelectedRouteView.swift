@@ -7,15 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SelectedRouteView: View {
     var body: some View {
         VStack {
             HStack{
+                Spacer()
                 Image(systemName: "house")
                 Text("Home")
+                    .fontWeight(.semibold)
                 Spacer()
-                Text("300 mt")
+                
             }
+            Spacer()
             Spacer()
             ZStack{
                 RoundedRectangle(cornerRadius: 15)
@@ -28,6 +31,8 @@ struct ContentView: View {
                     
             }
             Spacer()
+            Spacer()
+            
             ZStack{
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width: 134.0, height: 33.0)
@@ -38,16 +43,26 @@ struct ContentView: View {
                     
                     
             }
-            Spacer()
-            Text("Refreshed at 8:30")
+        Spacer()
+            HStack {
+                
+                Text("300 mt")
+                    .fontWeight(.semibold)
+                Image(systemName: "train.side.front.car")
+            }
+            .padding(.bottom, 20.0)
+            Text("Refreshed at 8:28")
+                .fontWeight(.thin)
            
         }
         .padding()
+        .background(Color("Notte"))
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SelectedRouteView()
     }
 }

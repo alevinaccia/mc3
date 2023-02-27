@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A889BDA29A8D6420077BE2B /* TracksApp.swift */; };
-		2A889BDD29A8D6420077BE2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A889BDC29A8D6420077BE2B /* ContentView.swift */; };
+		2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */; };
 		2A889BDF29A8D6430077BE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A889BDE29A8D6430077BE2B /* Assets.xcassets */; };
 		2A889BE229A8D6430077BE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A889BE129A8D6430077BE2B /* Preview Assets.xcassets */; };
 		2A889BE529A8D6430077BE2B /* Tracks Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2A889BD829A8D6420077BE2B /* Tracks Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AD4386C29ACAC6E000B19CD /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
+		2AD4386D29ACAC6E000B19CD /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
+		2AD4386E29ACAC6E000B19CD /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
 		3B863D3229A4E2B800B606AE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3129A4E2B800B606AE /* Trip.swift */; };
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
@@ -86,9 +89,10 @@
 /* Begin PBXFileReference section */
 		2A889BD829A8D6420077BE2B /* Tracks Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tracks Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A889BDA29A8D6420077BE2B /* TracksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksApp.swift; sourceTree = "<group>"; };
-		2A889BDC29A8D6420077BE2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRouteView.swift; sourceTree = "<group>"; };
 		2A889BDE29A8D6430077BE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A889BE129A8D6430077BE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2AD4386B29ACAC6E000B19CD /* RoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesView.swift; sourceTree = "<group>"; };
 		3B863D3129A4E2B800B606AE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trip.swift; path = mc3/view/Trip.swift; sourceTree = SOURCE_ROOT; };
 		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
@@ -146,7 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				2A889BDA29A8D6420077BE2B /* TracksApp.swift */,
-				2A889BDC29A8D6420077BE2B /* ContentView.swift */,
+				2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */,
+				2AD4386B29ACAC6E000B19CD /* RoutesView.swift */,
 				2A889BDE29A8D6430077BE2B /* Assets.xcassets */,
 				2A889BE029A8D6430077BE2B /* Preview Content */,
 			);
@@ -414,7 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A889BDD29A8D6420077BE2B /* ContentView.swift in Sources */,
+				2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */,
+				2AD4386E29ACAC6E000B19CD /* RoutesView.swift in Sources */,
 				2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +431,7 @@
 			files = (
 				C04CF00929A8CCBD00917586 /* Trip.swift in Sources */,
 				C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */,
+				2AD4386D29ACAC6E000B19CD /* RoutesView.swift in Sources */,
 				C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */,
 				C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */,
 				C04CF00A29A8CCC800917586 /* apiController.swift in Sources */,
@@ -444,6 +451,7 @@
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
+				2AD4386C29ACAC6E000B19CD /* RoutesView.swift in Sources */,
 				C0109E01299E43850075F6D1 /* mc3App.swift in Sources */,
 				3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */,
 				3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */,
