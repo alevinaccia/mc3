@@ -12,49 +12,33 @@ struct RoutesView: View {
         VStack{
             
             HStack{
-                Button {
-                    print("ciao")
-                } label: {
-                    Text(Image(systemName:"house"))
-                }
-                .background(Color("Tuorlo"))
-                .foregroundColor(Color("Notte"))
-                .clipShape(Circle())
                 
-                Button {
+                
+                ButtonView(imageName: "house") {
                     print("ciao")
-                } label: {
-                    Text(Image(systemName:"briefcase"))
                 }
                 
-                .background(Color("Tuorlo"))
-                .foregroundColor(Color("Notte"))
-                .clipShape(Circle())
+                ButtonView(imageName: "briefcase") {
+                    print("ciao")
+                }
+                
+                
                 
             }
             Spacer()
             
             HStack{
-            Button {
-                print("ciao")
-            } label: {
-                Text(Image(systemName:"graduationcap"))
-            }
-            
-            .background(Color("Tuorlo"))
-            .foregroundColor(Color("Notte"))
-            .clipShape(Circle())
                 
-                Button {
+                ButtonView(imageName: "graduationcap") {
                     print("ciao")
-                } label: {
-                    Text(Image(systemName:"book.closed"))
-                        
                 }
                 
-                .background(Color("Tuorlo"))
-                .foregroundColor(Color("Notte"))
-                .clipShape(Circle())
+                ButtonView(imageName: "book.closed") {
+                    print("ciao")
+                }
+                
+                
+                
             }
         }
         .padding(.all, 20.0)
