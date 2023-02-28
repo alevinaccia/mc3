@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A889BDA29A8D6420077BE2B /* TracksApp.swift */; };
 		2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */; };
-		2A889BDF29A8D6430077BE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A889BDE29A8D6430077BE2B /* Assets.xcassets */; };
 		2A889BE229A8D6430077BE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A889BE129A8D6430077BE2B /* Preview Assets.xcassets */; };
 		2A889BE529A8D6430077BE2B /* Tracks Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2A889BD829A8D6420077BE2B /* Tracks Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AD4386C29ACAC6E000B19CD /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
 		2AD4386D29ACAC6E000B19CD /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
-		2AD4386E29ACAC6E000B19CD /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
-		3B863D3229A4E2B800B606AE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3129A4E2B800B606AE /* Trip.swift */; };
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
@@ -26,19 +23,29 @@
 		C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */; };
 		C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */; };
 		C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7529A8CA1D009254A3 /* MyWidget.swift */; };
-		C00BDD7829A8CA1E009254A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00BDD7729A8CA1E009254A3 /* Assets.xcassets */; };
 		C00BDD7C29A8CA1E009254A3 /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */; };
 		C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */; };
 		C00BDD8B29A8CBC3009254A3 /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD7529A8CA1D009254A3 /* MyWidget.swift */; };
 		C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */; };
 		C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */; };
-		C0109E01299E43850075F6D1 /* mc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E00299E43850075F6D1 /* mc3App.swift */; };
+		C0109E01299E43850075F6D1 /* tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E00299E43850075F6D1 /* tracks.swift */; };
 		C0109E03299E43850075F6D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0109E02299E43850075F6D1 /* ContentView.swift */; };
-		C0109E05299E43870075F6D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
 		C0109E08299E43870075F6D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E07299E43870075F6D1 /* Preview Assets.xcassets */; };
-		C04CF00929A8CCBD00917586 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3129A4E2B800B606AE /* Trip.swift */; };
+		C01F723B29AD172F00522F3F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723829AD172F00522F3F /* Trip.swift */; };
+		C01F723C29AD172F00522F3F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723829AD172F00522F3F /* Trip.swift */; };
+		C01F723D29AD172F00522F3F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723829AD172F00522F3F /* Trip.swift */; };
+		C01F723E29AD172F00522F3F /* TrainStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723929AD172F00522F3F /* TrainStatus.swift */; };
+		C01F723F29AD172F00522F3F /* TrainStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723929AD172F00522F3F /* TrainStatus.swift */; };
+		C01F724029AD172F00522F3F /* TrainStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723929AD172F00522F3F /* TrainStatus.swift */; };
+		C01F724129AD172F00522F3F /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723A29AD172F00522F3F /* Stop.swift */; };
+		C01F724229AD172F00522F3F /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723A29AD172F00522F3F /* Stop.swift */; };
+		C01F724329AD172F00522F3F /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F723A29AD172F00522F3F /* Stop.swift */; };
+		C02662E329AD10E30071F9FA /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
 		C04CF00A29A8CCC800917586 /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
+		C0577D4A29ADEDEA005619F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01F724429AD174C00522F3F /* Assets.xcassets */; };
+		C0577D4C29ADEE0D005619F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0577D4B29ADEE0D005619F4 /* Assets.xcassets */; };
+		C0577D4D29ADEE97005619F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
 		C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBA29A4C14100DE5B28 /* searchTrip.swift */; };
 		C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEC029A77A4400DE5B28 /* tripCard.swift */; };
 		C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
@@ -90,10 +97,8 @@
 		2A889BD829A8D6420077BE2B /* Tracks Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tracks Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A889BDA29A8D6420077BE2B /* TracksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksApp.swift; sourceTree = "<group>"; };
 		2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRouteView.swift; sourceTree = "<group>"; };
-		2A889BDE29A8D6430077BE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A889BE129A8D6430077BE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AD4386B29ACAC6E000B19CD /* RoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesView.swift; sourceTree = "<group>"; };
-		3B863D3129A4E2B800B606AE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Trip.swift; path = mc3/view/Trip.swift; sourceTree = SOURCE_ROOT; };
 		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
 		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
@@ -105,16 +110,20 @@
 		C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetBundle.swift; sourceTree = "<group>"; };
 		C00BDD7529A8CA1D009254A3 /* MyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidget.swift; sourceTree = "<group>"; };
-		C00BDD7729A8CA1E009254A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C00BDD7929A8CA1E009254A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
 		C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
-		C0109DFD299E43850075F6D1 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0109E00299E43850075F6D1 /* mc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mc3App.swift; sourceTree = "<group>"; };
+		C0109DFD299E43850075F6D1 /* tracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0109E00299E43850075F6D1 /* tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tracks.swift; sourceTree = "<group>"; };
 		C0109E02299E43850075F6D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0109E04299E43870075F6D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0109E07299E43870075F6D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C016013C29A3896E006CE923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C01F723829AD172F00522F3F /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		C01F723929AD172F00522F3F /* TrainStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainStatus.swift; sourceTree = "<group>"; };
+		C01F723A29AD172F00522F3F /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		C01F724429AD174C00522F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Tracks Watch App/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		C0577D4B29ADEE0D005619F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tracks/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C085DEBA29A4C14100DE5B28 /* searchTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTrip.swift; sourceTree = "<group>"; };
 		C085DEC029A77A4400DE5B28 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCard.swift; sourceTree = "<group>"; };
 		C09DF9E9299F74E3007EE4FD /* apiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiController.swift; sourceTree = "<group>"; };
@@ -150,10 +159,10 @@
 		2A889BD929A8D6420077BE2B /* Tracks Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				C01F724429AD174C00522F3F /* Assets.xcassets */,
 				2A889BDA29A8D6420077BE2B /* TracksApp.swift */,
 				2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */,
 				2AD4386B29ACAC6E000B19CD /* RoutesView.swift */,
-				2A889BDE29A8D6430077BE2B /* Assets.xcassets */,
 				2A889BE029A8D6430077BE2B /* Preview Content */,
 			);
 			path = "Tracks Watch App";
@@ -195,10 +204,10 @@
 		C00BDD7229A8CA1D009254A3 /* MyWidget */ = {
 			isa = PBXGroup;
 			children = (
+				C0577D4B29ADEE0D005619F4 /* Assets.xcassets */,
 				C00BDD8129A8CA9D009254A3 /* Views */,
 				C00BDD7329A8CA1D009254A3 /* MyWidgetBundle.swift */,
 				C00BDD7529A8CA1D009254A3 /* MyWidget.swift */,
-				C00BDD7729A8CA1E009254A3 /* Assets.xcassets */,
 				C00BDD7929A8CA1E009254A3 /* Info.plist */,
 			);
 			path = MyWidget;
@@ -216,7 +225,7 @@
 		C0109DF4299E43850075F6D1 = {
 			isa = PBXGroup;
 			children = (
-				C0109DFF299E43850075F6D1 /* mc3 */,
+				C0109DFF299E43850075F6D1 /* tracks */,
 				C00BDD7229A8CA1D009254A3 /* MyWidget */,
 				2A889BD929A8D6420077BE2B /* Tracks Watch App */,
 				C00BDD6D29A8CA1D009254A3 /* Frameworks */,
@@ -228,26 +237,26 @@
 		C0109DFE299E43850075F6D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0109DFD299E43850075F6D1 /* mc3.app */,
+				C0109DFD299E43850075F6D1 /* tracks.app */,
 				C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */,
 				2A889BD829A8D6420077BE2B /* Tracks Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0109DFF299E43850075F6D1 /* mc3 */ = {
+		C0109DFF299E43850075F6D1 /* tracks */ = {
 			isa = PBXGroup;
 			children = (
+				C0109E04299E43870075F6D1 /* Assets.xcassets */,
+				C01F723729AD172F00522F3F /* model */,
 				3B863D3629A60F9200B606AE /* utils */,
 				C016013C29A3896E006CE923 /* Info.plist */,
-				C0109E00299E43850075F6D1 /* mc3App.swift */,
+				C0109E00299E43850075F6D1 /* tracks.swift */,
 				C0109E10299E46690075F6D1 /* viewmodel */,
-				C0109E0F299E46610075F6D1 /* model */,
 				C0109E0E299E46510075F6D1 /* view */,
-				C0109E04299E43870075F6D1 /* Assets.xcassets */,
 				C0109E06299E43870075F6D1 /* Preview Content */,
 			);
-			path = mc3;
+			path = tracks;
 			sourceTree = "<group>";
 		};
 		C0109E06299E43870075F6D1 /* Preview Content */ = {
@@ -272,20 +281,22 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		C0109E0F299E46610075F6D1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				3B863D3129A4E2B800B606AE /* Trip.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		C0109E10299E46690075F6D1 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
 				C09DF9E9299F74E3007EE4FD /* apiController.swift */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C01F723729AD172F00522F3F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C01F723829AD172F00522F3F /* Trip.swift */,
+				C01F723929AD172F00522F3F /* TrainStatus.swift */,
+				C01F723A29AD172F00522F3F /* Stop.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,9 +336,9 @@
 			productReference = C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		C0109DFC299E43850075F6D1 /* mc3 */ = {
+		C0109DFC299E43850075F6D1 /* tracks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0109E0B299E43870075F6D1 /* Build configuration list for PBXNativeTarget "mc3" */;
+			buildConfigurationList = C0109E0B299E43870075F6D1 /* Build configuration list for PBXNativeTarget "tracks" */;
 			buildPhases = (
 				C0109DF9299E43850075F6D1 /* Sources */,
 				C0109DFA299E43850075F6D1 /* Frameworks */,
@@ -341,9 +352,9 @@
 				C00BDD7B29A8CA1E009254A3 /* PBXTargetDependency */,
 				2A889BE429A8D6430077BE2B /* PBXTargetDependency */,
 			);
-			name = mc3;
+			name = tracks;
 			productName = mc3;
-			productReference = C0109DFD299E43850075F6D1 /* mc3.app */;
+			productReference = C0109DFD299E43850075F6D1 /* tracks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +378,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0109DF8299E43850075F6D1 /* Build configuration list for PBXProject "mc3" */;
+			buildConfigurationList = C0109DF8299E43850075F6D1 /* Build configuration list for PBXProject "tracks" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -380,7 +391,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0109DFC299E43850075F6D1 /* mc3 */,
+				C0109DFC299E43850075F6D1 /* tracks */,
 				C00BDD6B29A8CA1D009254A3 /* MyWidgetExtension */,
 				2A889BD729A8D6420077BE2B /* Tracks Watch App */,
 			);
@@ -392,8 +403,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0577D4A29ADEDEA005619F4 /* Assets.xcassets in Resources */,
 				2A889BE229A8D6430077BE2B /* Preview Assets.xcassets in Resources */,
-				2A889BDF29A8D6430077BE2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00BDD7829A8CA1E009254A3 /* Assets.xcassets in Resources */,
+				C0577D4C29ADEE0D005619F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,8 +420,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0577D4D29ADEE97005619F4 /* Assets.xcassets in Resources */,
 				C0109E08299E43870075F6D1 /* Preview Assets.xcassets in Resources */,
-				C0109E05299E43870075F6D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,9 +432,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01F723D29AD172F00522F3F /* Trip.swift in Sources */,
 				2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */,
-				2AD4386E29ACAC6E000B19CD /* RoutesView.swift in Sources */,
 				2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */,
+				C01F724029AD172F00522F3F /* TrainStatus.swift in Sources */,
+				C02662E329AD10E30071F9FA /* apiController.swift in Sources */,
+				C01F724329AD172F00522F3F /* Stop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,12 +445,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C04CF00929A8CCBD00917586 /* Trip.swift in Sources */,
 				C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */,
 				2AD4386D29ACAC6E000B19CD /* RoutesView.swift in Sources */,
+				C01F724229AD172F00522F3F /* Stop.swift in Sources */,
 				C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */,
 				C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */,
 				C04CF00A29A8CCC800917586 /* apiController.swift in Sources */,
+				C01F723C29AD172F00522F3F /* Trip.swift in Sources */,
+				C01F723F29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,17 +461,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B863D3229A4E2B800B606AE /* Trip.swift in Sources */,
+				C01F723E29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */,
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
 				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
+				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
 				3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				2AD4386C29ACAC6E000B19CD /* RoutesView.swift in Sources */,
-				C0109E01299E43850075F6D1 /* mc3App.swift in Sources */,
+				C01F724129AD172F00522F3F /* Stop.swift in Sources */,
+				C0109E01299E43850075F6D1 /* tracks.swift in Sources */,
 				3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */,
 				3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */,
 				3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */,
@@ -485,21 +503,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tracks Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = self.mc3;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = self.tracks;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.mc3.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = self.tracks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -515,21 +535,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tracks Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = self.mc3;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = self.tracks;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.mc3.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = self.tracks.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -545,6 +567,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7272LWF3H8;
@@ -558,7 +581,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.mc3.MyWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = self.tracks.MyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -572,6 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7272LWF3H8;
@@ -585,7 +609,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.mc3.MyWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = self.tracks.MyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -714,13 +738,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mc3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mc3/Info.plist;
+				INFOPLIST_FILE = tracks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -731,7 +756,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.mc3;
+				PRODUCT_BUNDLE_IDENTIFIER = self.tracks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -745,13 +770,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mc3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mc3/Info.plist;
+				INFOPLIST_FILE = tracks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -762,7 +788,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.mc3;
+				PRODUCT_BUNDLE_IDENTIFIER = self.tracks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -791,7 +817,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0109DF8299E43850075F6D1 /* Build configuration list for PBXProject "mc3" */ = {
+		C0109DF8299E43850075F6D1 /* Build configuration list for PBXProject "tracks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0109E09299E43870075F6D1 /* Debug */,
@@ -800,7 +826,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0109E0B299E43870075F6D1 /* Build configuration list for PBXNativeTarget "mc3" */ = {
+		C0109E0B299E43870075F6D1 /* Build configuration list for PBXNativeTarget "tracks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0109E0C299E43870075F6D1 /* Debug */,

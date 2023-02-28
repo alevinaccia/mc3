@@ -12,101 +12,18 @@ struct trainInfo {
     let b : String
 }
 
-struct statNameCode {
+struct Station {
     var name : String = "def"
     var code : String = "aaa"
 }
 
-struct TrainStatus: Decodable, Hashable {
-    static func == (lhs: TrainStatus, rhs: TrainStatus) -> Bool {
-        lhs.trainNumber == rhs.trainNumber
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case origine, destinazione, numeroTreno, ritardo, fermate, compInStazionePartenza
-    }
-    let departStation : String
-    let arrivalStation : String
-    let trainNumber : Int
-    let delay: Int
-    let stops : [Stop]
-    let departed : Bool
-    var timeAtMyStation : Int
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.departStation = try container.decode(String.self, forKey: .origine)
-        self.arrivalStation = try container.decode(String.self, forKey: .destinazione)
-        self.trainNumber = try container.decode(Int.self, forKey: .numeroTreno)
-        self.delay = try container.decode(Int.self, forKey: .ritardo)
-        self.stops = try container.decode([Stop].self, forKey: .fermate)
-        self.departed = try container.decode([String].self, forKey: .compInStazionePartenza).contains(where: {$0 == "Partito"})
-        self.timeAtMyStation = 0
-    }
-    
-    init(departStation : String, arrivalStation : String, trainNumber : Int, delay : Int, stops : [Stop], departed : Bool, time : Int) {
-        self.departStation = departStation
-        self.arrivalStation = arrivalStation
-        self.trainNumber = trainNumber
-        self.delay = delay
-        self.stops = stops
-        self.departed = departed
-        self.timeAtMyStation = time
-    }
-    
-    mutating func setTime(station : String){
-        for stop in self.stops {
-            if stop.stationCode == station {
-                self.timeAtMyStation = stop.departTime
-                break
-            }
-        }
-    }
-    func hash(into hasher: inout Hasher) {
-       hasher.combine(trainNumber)
-     }
-}
-
-struct Stop: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case stazione, programmata, id
-    }
-    
-    let station : String
-    let departTime: Int
-    let stationCode : String
-    
-    init(station : String, departTime : Int, stationCode : String) {
-        self.station = station
-        self.departTime = departTime
-        self.stationCode = stationCode
-    }
-    
-    init(from decoder: Decoder) throws {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.station = try container.decode(String.self, forKey: .stazione)
-        self.departTime = (try container.decode(Int.self, forKey : .programmata)/1000)
-        self.stationCode = try container.decode(String.self, forKey : .id)
-    }
-}
-
-struct testStruct : Decodable {
-    enum CodingKeys: String, CodingKey {
-        case numeroTreno, destinazione
-    }
-    var trainCode : String
-    let destination : String
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.trainCode = String(try container.decode(Int.self, forKey: .numeroTreno))
-        self.destination = try container.decode(String.self, forKey: .destinazione)
-    }
-}
 
 class ApiController {
+    
+    static let shared = ApiController()
+    
+    private init() {
+    }
     
     let findTrainUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/cercaNumeroTrenoTrenoAutocomplete/")!
     let trainStatusUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/andamentoTreno/")!
@@ -154,7 +71,7 @@ class ApiController {
         }
     }
     
-    func getPossibleTrips(from : String, to : String) async throws -> [TrainStatus] {
+    func getPossibleTrains(from : String, to : String) async throws -> [TrainStatus] {
         var trips : [TrainStatus] = []
         
         do {
@@ -180,6 +97,7 @@ class ApiController {
                     break
                 }
             }
+            print(trips)
             return trips
         }
         catch {

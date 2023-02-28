@@ -7,19 +7,20 @@
 
 import Foundation
 
+
 struct Trip : Identifiable{
     let id: UUID
     var name : String
-    let possibleTrips : [TrainStatus]
-    let startPoint : String
-    let endPoint : String
+    let possibleTrains : [TrainStatus]
+    let startPoint : Station
+    let endPoint : Station
     var nextArrivals : [String] = []
     //dati mapkit (location, distanza, tempo)
     
-    init(id: UUID, name: String, possibleTrips: [TrainStatus], startPoint: String, endPoint: String){
+    init(id: UUID, name: String, possibleTrains: [TrainStatus], startPoint: Station, endPoint: Station){
         self.id = UUID()
         self.name = name
-        self.possibleTrips = possibleTrips
+        self.possibleTrains = possibleTrains
         self.startPoint = startPoint
         self.endPoint = endPoint
     }
@@ -27,7 +28,7 @@ struct Trip : Identifiable{
     mutating func updateTrips(){
         //update delays
         self.nextArrivals = []
-        for train in possibleTrips {
+        for train in possibleTrains {
             let now = Date().timeIntervalSince1970/1000
             self.nextArrivals.append(String((train.timeAtMyStation - Int(now))/60))
         }

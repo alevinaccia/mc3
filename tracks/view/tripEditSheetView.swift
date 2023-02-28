@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct tripEditSheetView: View {
-    let controller : ApiController = ApiController()
-    @State var firstStation : statNameCode = statNameCode()
-    @State var secondStation : statNameCode = statNameCode()
+    @State var firstStation : Station = Station()
+    @State var secondStation : Station = Station()
     @State var possibileTrips : [TrainStatus] = []
     
     var flagPossibleTrip : Bool = false

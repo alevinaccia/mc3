@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingSheet = false
+    //@State var userTrips : [Trip] = []
     
     var body: some View {
 
@@ -20,7 +21,6 @@ struct ContentView: View {
             .toolbar{
                 ToolbarItem{
                     Button{
-                        
                         showingSheet.toggle()
                         
                     }label: {

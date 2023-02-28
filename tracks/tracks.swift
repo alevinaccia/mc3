@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct mc3App: App {
+struct tracks: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
