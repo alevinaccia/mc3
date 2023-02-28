@@ -17,7 +17,7 @@ struct Trip : Identifiable, Hashable{
     
     let id: UUID
     var name : String
-    let possibleTrips : [TrainStatus]
+    var possibleTrains : [TrainStatus]
     let startPoint : Station
     let endPoint : Station
     var nextArrivals : [String] = []
@@ -26,20 +26,24 @@ struct Trip : Identifiable, Hashable{
     init(id: UUID, name: String, possibleTrips: [TrainStatus], startPoint: Station, endPoint: Station){
         self.id = UUID()
         self.name = name
-        self.possibleTrips = possibleTrips
+        self.possibleTrains = possibleTrips
         self.startPoint = startPoint
         self.endPoint = endPoint
     }
     
-    mutating func updateTrips(){
+    mutating func updateTrips() async{
         //update delays
-        self.nextArrivals = []
-        for train in possibleTrips {
-            let now = Date().timeIntervalSince1970/1000
-            self.nextArrivals.append(String((train.timeAtMyStation - Int(now))/60))
+        do {
+            self.nextArrivals = []
+            self.possibleTrains = try await ApiController.shared.getPossibleTrains(from: startPoint.code, to: endPoint.code)
+            for train in possibleTrains {
+                let now = Date().timeIntervalSince1970/1000
+                self.nextArrivals.append(String((train.timeAtMyStation - Int(now))/60))
+            }
+        } catch {
+            print(error)
         }
         //get new trips
         //remove old ones
     }
-    
 }
