@@ -12,12 +12,6 @@ struct trainInfo {
     let b : String
 }
 
-struct Station {
-    var name : String = "def"
-    var code : String = "aaa"
-}
-
-
 class ApiController {
     
     static let shared = ApiController()

@@ -21,6 +21,10 @@
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
 		3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4129A8D03E00B606AE /* iconSelector.swift */; };
 		3B863D4829ADFB6700B606AE /* tripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4729ADFB6700B606AE /* tripController.swift */; };
+		3B863D4A29AE16D100B606AE /* SavedTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4929AE16D100B606AE /* SavedTrip.swift */; };
+		3B863D4C29AE19F700B606AE /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4B29AE19F700B606AE /* Station.swift */; };
+		3B863D4D29AE19F700B606AE /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4B29AE19F700B606AE /* Station.swift */; };
+		3B863D4E29AE19F700B606AE /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4B29AE19F700B606AE /* Station.swift */; };
 		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
 		C00BDD6F29A8CA1D009254A3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */; };
 		C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */; };
@@ -108,6 +112,8 @@
 		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
 		3B863D4129A8D03E00B606AE /* iconSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconSelector.swift; sourceTree = "<group>"; };
 		3B863D4729ADFB6700B606AE /* tripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripController.swift; sourceTree = "<group>"; };
+		3B863D4929AE16D100B606AE /* SavedTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTrip.swift; sourceTree = "<group>"; };
+		3B863D4B29AE19F700B606AE /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
 		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -300,6 +306,8 @@
 				C01F723829AD172F00522F3F /* Trip.swift */,
 				C01F723929AD172F00522F3F /* TrainStatus.swift */,
 				C01F723A29AD172F00522F3F /* Stop.swift */,
+				3B863D4929AE16D100B606AE /* SavedTrip.swift */,
+				3B863D4B29AE19F700B606AE /* Station.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADA500B29ADFAD1000DB962 /* RoutesView.swift in Sources */,
+				3B863D4E29AE19F700B606AE /* Station.swift in Sources */,
 				C01F723D29AD172F00522F3F /* Trip.swift in Sources */,
 				2ADA500D29ADFB7F000DB962 /* ButtonView.swift in Sources */,
 				2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */,
@@ -462,6 +471,7 @@
 				C04CF00A29A8CCC800917586 /* apiController.swift in Sources */,
 				C01F723C29AD172F00522F3F /* Trip.swift in Sources */,
 				C01F723F29AD172F00522F3F /* TrainStatus.swift in Sources */,
+				3B863D4D29AE19F700B606AE /* Station.swift in Sources */,
 				C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +482,7 @@
 			files = (
 				C01F723E29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */,
+				3B863D4A29AE16D100B606AE /* SavedTrip.swift in Sources */,
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
 				3B863D4829ADFB6700B606AE /* tripController.swift in Sources */,
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
@@ -479,6 +490,7 @@
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
+				3B863D4C29AE19F700B606AE /* Station.swift in Sources */,
 				3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				C01F724129AD172F00522F3F /* Stop.swift in Sources */,

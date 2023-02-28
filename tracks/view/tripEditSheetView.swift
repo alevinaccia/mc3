@@ -46,7 +46,7 @@ struct tripEditSheetView: View {
                 .navigationBarItems(trailing: Button(action: {
                     do {
                         try
-                        //addTripLocal()
+                        addTripLocal(nameIn: tagName, startPointIn: startPoint, endPointIn: endPoint, iconNameIn: iconName)
                         dismiss()
                     }catch{
                         //how do I show them the error? alerts are deprecated, Should I set the button unclickable? How?
@@ -70,24 +70,19 @@ enum FormSubmissionError: Error {
     case anyOtherKindofError
 }
 
-private func addTripLocal(nameIn: String, possibleIn: [TrainStatus], startPointIn: Station, endPointIn: Station, nextArrivalsIn: [String]) throws{
+private func addTripLocal(nameIn: String, startPointIn: Station, endPointIn: Station, iconNameIn: String) throws{
     
     guard startPointIn.name != "" && endPointIn.name != "" else {throw FormSubmissionError.missingInput}
     
     let tripId: UUID = UUID()
     var tripName = nameIn
-    var possibileTrips = possibleIn
     var startPoint = startPointIn
     var endPoint = endPointIn
-    var nextArrivals = nextArrivalsIn
+    var iconName = iconNameIn
     
-    let newTrip: Trip = Trip(id: tripId, name: tripName, possibleTrips: possibleIn, startPoint: startPointIn, endPoint: endPointIn)
+    let newTrip: SavedTrip = SavedTrip(id: tripId, name: tripName, startPoint: startPointIn, endPoint: endPointIn, iconName: iconNameIn)
     
-    do{
-        //addTrip(tripIn: newTrip)
-    }catch{
-        print("Error")
-    }
+    TripViewModel.shared.saveJsonFile(newSavedTrip: newTrip)
     
 }
 
