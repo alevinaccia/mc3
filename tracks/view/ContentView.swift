@@ -9,28 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingSheet = false
-    //@State var userTrips : [Trip] = []
+    @State var userTrips: [Trip] = []
     
     var body: some View {
-
-        NavigationView(){
+        
+        NavigationStack {
             VStack{
-                Text("Ciao")
-            }
-            .navigationTitle("Train Stations")
-            .toolbar{
-                ToolbarItem{
-                    Button{
-                        showingSheet.toggle()
-                        
-                    }label: {
-                        Label("Add Item", systemImage: "plus")
+                ForEach(0..<4) { i in
+                    if(userTrips.isEmpty){
+                        CardViewEmpty(showingSheet: $showingSheet)
                     }
-                    .sheet(isPresented: $showingSheet) {
-                        tripEditSheetView()
+                    else if (i <= userTrips.count){
+                        CardView(card: userTrips[i])
+                    }
+                    else{
+                        CardViewEmpty(showingSheet: $showingSheet)
                     }
                 }
+                
             }
+            .navigationTitle("Train Stations")
         }
     }
 }

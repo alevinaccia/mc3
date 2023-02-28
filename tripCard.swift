@@ -36,7 +36,7 @@ struct CardView: View {
                     
                 }.padding(.top)
                 
-                Text("\(card.startPoint.name )Arrive  \(card.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
+                Text("\(card.startPoint.name + " Arrive " + card.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
                     .padding(.leading)
                 
                 HStack{
