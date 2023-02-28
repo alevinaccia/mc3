@@ -3,9 +3,9 @@ import Foundation
 
 struct CardViewEmpty: View {
 
+    @Binding var showingSheet: Bool
     var body: some View {
-            
-            
+
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 24, style: .continuous).fill(.white)
@@ -97,23 +97,25 @@ struct CardViewEmpty: View {
                     }
                 }.opacity(0.5)
                 Button {
-                    print("add")
+                    showingSheet.toggle()
                 } label: {
                     Text("\(Image(systemName: "plus.circle"))" )
                         .foregroundColor(Color(.black))
                         .font(.system(size: 60)
                             .bold())
+                }.sheet(isPresented: $showingSheet) {
+                    tripEditSheetView()
                 }
             }
             .frame(width: 329, height: 155)
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardViewEmpty()
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardViewEmpty()
+//    }
+//}
 
 
 

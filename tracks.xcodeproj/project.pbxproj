@@ -16,8 +16,8 @@
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
-		3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3D29A783CD00B606AE /* SearchBar.swift */; };
 		3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4129A8D03E00B606AE /* iconSelector.swift */; };
+		3B863D4829ADFB6700B606AE /* tripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4729ADFB6700B606AE /* tripController.swift */; };
 		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
 		C00BDD6F29A8CA1D009254A3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */; };
 		C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */; };
@@ -102,8 +102,8 @@
 		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
 		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
-		3B863D3D29A783CD00B606AE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3B863D4129A8D03E00B606AE /* iconSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iconSelector.swift; sourceTree = "<group>"; };
+		3B863D4729ADFB6700B606AE /* tripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripController.swift; sourceTree = "<group>"; };
 		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
 		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -275,7 +275,6 @@
 				C0109E02299E43850075F6D1 /* ContentView.swift */,
 				3B863D3929A6370800B606AE /* tripCardEmpty.swift */,
 				3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */,
-				3B863D3D29A783CD00B606AE /* SearchBar.swift */,
 				3B863D4129A8D03E00B606AE /* iconSelector.swift */,
 			);
 			path = view;
@@ -285,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				C09DF9E9299F74E3007EE4FD /* apiController.swift */,
+				3B863D4729ADFB6700B606AE /* tripController.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -464,6 +464,7 @@
 				C01F723E29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */,
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
+				3B863D4829ADFB6700B606AE /* tripController.swift in Sources */,
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
 				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
@@ -475,7 +476,6 @@
 				C01F724129AD172F00522F3F /* Stop.swift in Sources */,
 				C0109E01299E43850075F6D1 /* tracks.swift in Sources */,
 				3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */,
-				3B863D3E29A783CD00B606AE /* SearchBar.swift in Sources */,
 				3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */,
 				3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */,
 				C00BDD8B29A8CBC3009254A3 /* MyWidget.swift in Sources */,

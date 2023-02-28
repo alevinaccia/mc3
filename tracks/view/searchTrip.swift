@@ -1,3 +1,67 @@
+////
+////  searchTrip.swift
+////  mc3
+////
+////  Created by Alessandro Vinaccia on 21/02/23.
+////
+//
+//import SwiftUI
+//
+//struct searchTrip: View {
+//    @Binding var startPoint : statNameCode
+//    @Binding var endPoint : statNameCode
+//    @State var queryRequest : String = ""
+//    @State var searchResult : [Substring] = []
+//    @Binding var possibleTrips : [TrainStatus]
+//    var controller : ApiController = ApiController()
+//
+//    var body: some View {
+//        VStack {
+//            Text(startPoint.name)
+//            Text(endPoint.name)
+//            TextField("search", text: $queryRequest)
+//                .onChange(of: queryRequest) { newValue in
+//                    if queryRequest == "" {
+//                        searchResult = []
+//                        return
+//                    }
+//                    Task{
+//                        searchResult = try await controller.research(query: queryRequest)
+//                    }
+//                }
+//            List(searchResult, id: \.self) { res in
+//                Button {
+//                    if startPoint.name == "def" {
+//                        let format = res.split(separator: "|")
+//                        startPoint.name = String(format[0])
+//                        startPoint.code = String(format[1])
+//                        queryRequest = ""
+//                    }else {
+//                        let format = res.split(separator: "|")
+//                        endPoint.name = String(format[0])
+//                        endPoint.code = String(format[1])
+//                        queryRequest = ""
+//                    }
+//                } label: {
+//                    Text(res)
+//                }
+//            }.onChange(of: endPoint.name) { newValue in
+//                Task {
+//                    possibleTrips = try await controller.getPossibleTrips(from: firstStation.code, to: endPoint.code)
+//                }
+//            }
+//        }
+//    }
+//}
+//
+
+//
+//  searchTrip.swift
+//  mc3
+//
+//  Created by Alessandro Vinaccia on 21/02/23.
+//
+
 import SwiftUI
 
 struct searchTrip: View {
@@ -8,18 +72,20 @@ struct searchTrip: View {
     @State var queryRequestEnd : String = ""
     @State var searchResult : [Substring] = []
     @Binding var possibleTrips : [TrainStatus]
-
+    
     @State var selectedFirstBar : Bool = false
     @State var selectedSecondBar : Bool = false
     @State var startingPoint : String = "Stazione di partenza"
     @State var endingPoint : String = "Stazione di arrivo"
     
+    @Binding var tagName: String
+    @Binding var iconName: String
+    
     var body: some View {
-   
+        
+        
+        
         VStack {
-            Text(firstStation.name)
-            Text(secondStation.name)
-            
             HStack{
                 Text("da:")
                     .foregroundColor(.black)
@@ -52,6 +118,7 @@ struct searchTrip: View {
                     }
                 }
             }
+            
             .frame(width: 329, height: 36)
             //.background(RoundedRectangle(cornerRadius: 8).fill(Color("Notte")))
                 .overlay(
@@ -69,13 +136,16 @@ struct searchTrip: View {
                 
                 TextField(endingPoint, text: $queryRequestEnd, onEditingChanged: { (isBegin) in
                     if isBegin {
+                        print("Begins editing")
                         selectedSecondBar = true
                         
                     } else {
+                        print("Finishes editing")
                         selectedSecondBar = false
                     }
                 },
                           onCommit: {
+                    print("commit")
                 })
                 .padding(.leading)
                 .bold()
@@ -121,14 +191,16 @@ struct searchTrip: View {
                     }
                 }
                 .transition(.slide)
-            } 
-            
-            
-        }.onChange(of: secondStation.name) { newValue in
+            }
+            else{
+                iconSelector(tagName: $tagName, iconName: $iconName).padding(.top)
+            }
+
+        }
+        .padding(.top)
+        .onChange(of: secondStation.name) { newValue in
             Task {
                 possibleTrips = try await ApiController.shared.getPossibleTrains(from: firstStation.code, to: secondStation.code)
-                let trip = Trip(id: UUID(), name: "Home", possibleTrains: possibleTrips, startPoint: firstStation, endPoint: secondStation)
-                print(trip)
             }
         }
     }
