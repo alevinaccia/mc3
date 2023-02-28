@@ -17,7 +17,8 @@ struct ButtonView: View {
             action()
         } label: {
             Text(Image(systemName: imageName))
-                .padding()
+                .padding(10.0)
+                .font(.system(size: 25))
         }
         .background(Color("Tuorlo"))
         .foregroundColor(Color("Notte"))

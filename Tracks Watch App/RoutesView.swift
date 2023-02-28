@@ -26,7 +26,7 @@ struct RoutesView: View {
                 
             }
             Spacer()
-            
+            Spacer()
             HStack{
                 
                 ButtonView(imageName: "graduationcap") {
