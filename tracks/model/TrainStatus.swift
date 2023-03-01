@@ -46,8 +46,8 @@ struct TrainStatus: Decodable, Hashable {
     
     mutating func setTime(station : String){
         for stop in self.stops {
-            if stop.stationCode == station {
-                self.timeAtMyStation = stop.departTime
+            if stop.station.code == station {
+                self.timeAtMyStation = stop.departTime + (self.delay * 60)
                 break
             }
         }

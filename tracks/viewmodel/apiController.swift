@@ -80,9 +80,9 @@ class ApiController {
             for departure in departures {
                 var train : TrainStatus = try await getTrainStatus(trainInfo: await getTrainInfo(code: departure.trainCode)!, code: departure.trainCode)
                 
-                if train.stops.contains(where: {$0.stationCode ==  to}) && train.stops.firstIndex(where: {$0.stationCode == to})! > train.stops.firstIndex(where: {$0.stationCode == from})! && !train.departed {
+                if train.stops.contains(where: {$0.station.code ==  to}) && train.stops.firstIndex(where: {$0.station.code == to})! > train.stops.firstIndex(where: {$0.station.code == from})! && !train.departed {
                     train.setTime(station: from)
-                    if isDateValid(stoptime : train.timeAtMyStation) {
+                    if (Double(train.timeAtMyStation) > Date().timeIntervalSince1970) {
                         trips.append(train)
                     }
                 }
@@ -98,10 +98,6 @@ class ApiController {
             throw error
         }
     }
-    
-    func isDateValid(stoptime : Int) -> Bool{
-        let now = Int(Date().timeIntervalSince1970/1000)
-        return stoptime > now
-    }
+
 }
 

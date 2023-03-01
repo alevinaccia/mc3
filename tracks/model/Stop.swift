@@ -12,23 +12,20 @@ struct Stop: Decodable {
         case stazione, programmata, id
     }
     
-    let station : String
+    let station : Station
     let departTime: Int
-    let stationCode : String
     
-    init(station : String, departTime : Int, stationCode : String) {
+    init(station : Station, departTime : Int) {
         self.station = station
         self.departTime = departTime
-        self.stationCode = stationCode
     }
     
     init(from decoder: Decoder) throws {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.station = try container.decode(String.self, forKey: .stazione)
+        self.station = Station(name: try container.decode(String.self, forKey: .stazione), code: try container.decode(String.self, forKey : .id))
         self.departTime = (try container.decode(Int.self, forKey : .programmata)/1000)
-        self.stationCode = try container.decode(String.self, forKey : .id)
     }
 }
 
