@@ -91,7 +91,6 @@ class ApiController {
                     break
                 }
             }
-            print(trips)
             return trips
         }
         catch {

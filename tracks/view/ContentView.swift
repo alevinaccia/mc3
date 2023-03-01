@@ -9,24 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingSheet = false
-    @State var userTrips: [Trip] = []
+    @State var trips = TripViewModel.shared.userTrips
     
     var body: some View {
         
         NavigationStack {
             VStack{
                 ForEach(0..<4) { i in
-                    if(userTrips.isEmpty){
+                    if(trips.isEmpty){
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
-                    else if (i <= userTrips.count){
-                        CardView(card: userTrips[i])
+                    else if (i < trips.count){
+                        CardView(trip: trips[i])
                     }
                     else{
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
                 }
                 
+                
+            }.task {
+                do {
+                    try await TripViewModel.shared.readData()
+                    trips = TripViewModel.shared.userTrips
+                }
+                catch {
+                    TripViewModel.shared.userTrips = []
+                }
+            
             }
             .navigationTitle("Train Stations")
         }

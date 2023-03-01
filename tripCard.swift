@@ -3,7 +3,7 @@ import Foundation
 
 struct CardView: View {
     //EXAMPLE
-    let card : Trip
+    let trip : Trip
     
     var body: some View {
         ZStack{
@@ -12,7 +12,7 @@ struct CardView: View {
                 .frame(width: 329, height: 155)
             VStack(alignment: .leading){
                 HStack{
-                    Text("\(Image(systemName: "house")) \(card.name)" )
+                    Text("\(Image(systemName: "house")) \(trip.name)" )
                         .font(.system(size: 18))
                         .fontWeight(.bold)
                         .bold()
@@ -36,13 +36,13 @@ struct CardView: View {
                     
                 }.padding(.top)
                 
-                Text("\(card.startPoint.name + " Arrive " + card.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
+                Text("\(trip.startPoint.name + " Arrive " + trip.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
                     .padding(.leading)
                 
                 HStack{
                     ZStack{
                         HStack{
-                            Text("7 mins")
+                            Text("\(trip.nextArrivals[0]) mins")
                                 .padding(4)
                                 
                             Text("14")
@@ -62,7 +62,7 @@ struct CardView: View {
                     
                     ZStack{
                         HStack{
-                            Text("9 mins")
+                            Text("\(trip.nextArrivals[1]) mins")
                                 .padding(4)
                                 
                             Text("10")

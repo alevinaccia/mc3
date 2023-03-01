@@ -16,12 +16,8 @@ class TripViewModel: ObservableObject{
     @Published var savedTrips: [SavedTrip] = []
     
     func saveJsonFile(newSavedTrip : SavedTrip){
-        do{
-            savedTrips.append(newSavedTrip)
-            writeData(savedTrips: savedTrips)
-        }catch{
-            print("Impossibile salvare")
-        }
+        savedTrips.append(newSavedTrip)
+        writeData(savedTrips: savedTrips)
     }
     
     func writeData(savedTrips : [SavedTrip]) -> Void {
@@ -38,8 +34,7 @@ class TripViewModel: ObservableObject{
         }
     }
     
-    
-    func readData() {
+    func readData() async throws {
         do {
             let dataURL = try FileManager.default
                 .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -49,13 +44,19 @@ class TripViewModel: ObservableObject{
             
             let arrayTrips = try JSONDecoder().decode([SavedTrip].self, from: data)
             
-            
             TripViewModel.shared.savedTrips = arrayTrips
+            await self.generateTrips()
             
-            
-            print("I've been called!")
         } catch {
-            print("error reading data")
+            throw error
+        }
+    }
+    
+    func generateTrips() async{
+        for savedTrip in savedTrips {
+            var newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint)
+            await newTrip.updateTrips()
+            TripViewModel.shared.userTrips.append(newTrip)
         }
     }
 }

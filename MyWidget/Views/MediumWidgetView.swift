@@ -4,12 +4,11 @@ struct MediumWidgetView : View {
 var entry: SimpleEntry
 
 //EXAMPLE
-    let card : Trip = Trip(id: UUID(), name: "Home", possibleTrips: [TrainStatus(departStation: "NAPOLI S.GIOV.BARRA", arrivalStation: "POZZUOLI SOLFATARA", trainNumber: 20948, delay: 0, stops: [Stop(station: "NAPOLI S.GIOV.BARRA", departTime: 8, stationCode: "S09800"), Stop(station: "NAPOLI GIANTURCO", departTime: 8, stationCode: "S09110"), Stop(station: "NAPOLI PIAZZA GARIBALDI", departTime: 8, stationCode: "S09109"), Stop(station: "PIAZZA CAVOUR", departTime: 8, stationCode: "S09108"), Stop(station: "NAPOLI MONTESANTO", departTime: 8, stationCode: "S09107"), Stop(station: "PIAZZA AMEDEO", departTime: 8, stationCode: "S09106"), Stop(station: "NAPOLI MERGELLINA", departTime: 8, stationCode: "S09105"), Stop(station: "NAPOLI PIAZZA LEOPARDI", departTime: 8, stationCode: "S09104"), Stop(station: "NAPOLI CAMPI FLEGREI", departTime: 8, stationCode: "S09103"), Stop(station: "CAVALLEGGERI AOSTA", departTime: 8, stationCode: "S09113"), Stop(station: "BAGNOLI AGNANO TERME", departTime: 8, stationCode: "S09102"), Stop(station: "POZZUOLI SOLFATARA", departTime: 8, stationCode: "S09101")], departed: false, time: 12)], startPoint: Station(name: "teet", code: "0505"), endPoint: Station(name: "teet", code: "0505"))
-
+    let card : Trip = Trip(id: UUID(), name: "AAA", startPoint: Station(name: "ee", code: "ee"), endPoint: Station(name: "ee", code: "ee"))
     var now = Date.now.formatted()
 
 
-        var body: some View {
+    var body: some View {
             if now < card.nextArrivals[0]  {
                 Text("\(Image(systemName: "house")) \(card.name)" )
             } else {

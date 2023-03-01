@@ -23,12 +23,13 @@ struct Trip : Identifiable, Hashable{
     var nextArrivals : [String] = []
     //dati mapkit (location, distanza, tempo)
     
-    init(id: UUID, name: String, possibleTrips: [TrainStatus], startPoint: Station, endPoint: Station){
-        self.id = UUID()
+    init(id: UUID, name: String, startPoint: Station, endPoint: Station){
+        self.id = id
         self.name = name
-        self.possibleTrains = possibleTrips
         self.startPoint = startPoint
         self.endPoint = endPoint
+        self.possibleTrains = []
+        self.nextArrivals = []
     }
     
     mutating func updateTrips() async{
@@ -37,13 +38,12 @@ struct Trip : Identifiable, Hashable{
             self.nextArrivals = []
             self.possibleTrains = try await ApiController.shared.getPossibleTrains(from: startPoint.code, to: endPoint.code)
             for train in possibleTrains {
-                let now = Date().timeIntervalSince1970/1000
-                self.nextArrivals.append(String((train.timeAtMyStation - Int(now))/60))
+                let now = Date().timeIntervalSince1970
+                print(train.timeAtMyStation, now)
+                self.nextArrivals.append(String(Int(Double(train.timeAtMyStation) - now)/60))
             }
         } catch {
             print(error)
         }
-        //get new trips
-        //remove old ones
     }
 }
