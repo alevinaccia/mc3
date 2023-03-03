@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     @State private var showingSheet = false
     @State var trips = TripViewModel.shared.userTrips
     
     var body: some View {
         
-        NavigationStack {
+        NavigationView {
             VStack{
                 ForEach(0..<4) { i in
                     if(trips.isEmpty){
@@ -38,8 +39,10 @@ struct ContentView: View {
                 }
             
             }
-            .navigationTitle("Train Stations")
-        }
+            .navigationTitle("My routes")
+        }.fullScreenCover(isPresented: $shouldShowOnboarding, content: {
+            onboardingView (shouldShowOnboarding: $shouldShowOnboarding)
+    })
     }
 }
 
