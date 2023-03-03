@@ -82,6 +82,8 @@ class ApiController {
                 
                 if train.stops.contains(where: {$0.station.code ==  to}) && train.stops.firstIndex(where: {$0.station.code == to})! > train.stops.firstIndex(where: {$0.station.code == from})! && !train.departed {
                     train.setTime(station: from)
+                    train.setTrack(track: departure.track ?? "-")
+                    
                     if (Double(train.timeAtMyStation) > Date().timeIntervalSince1970) {
                         trips.append(train)
                     }

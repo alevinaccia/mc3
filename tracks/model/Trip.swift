@@ -32,6 +32,19 @@ struct Trip : Identifiable, Hashable{
         self.nextArrivals = []
     }
     
+    init(){
+        self.id = UUID()
+        self.name = ""
+        self.possibleTrains = []
+        self.startPoint = Station()
+        self.endPoint = Station()
+        self.nextArrivals = []
+    }
+    
+    mutating func changeName() {
+        self.name = "chamge"
+    }
+    
     mutating func updateTrips() async{
         //update delays
         do {
