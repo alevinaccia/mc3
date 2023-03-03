@@ -41,7 +41,7 @@ struct SavedTrip : Identifiable, Codable{
         
         try container.encode(self.id, forKey: .id)
         try container.encode(self.name, forKey: .nome)
-        try container.encode(self.startPoint.self, forKey: .puntoInizio)
+        try container.encode(self.startPoint, forKey: .puntoInizio)
         try container.encode(self.endPoint, forKey: .puntoFine)
         try container.encode(self.iconName, forKey: .nomeIcona)
     }

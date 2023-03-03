@@ -44,13 +44,16 @@ struct tripEditSheetView: View {
                 }
             }.navigationBarTitle("Create Event", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
-                    do {
-                        try
-                        addTripLocal(nameIn: tagName, startPointIn: startPoint, endPointIn: endPoint, iconNameIn: iconName)
-                        dismiss()
-                    }catch{
-                        //how do I show them the error? alerts are deprecated, Should I set the button unclickable? How?
-                        print("Missing field")
+                    Task {
+                        do {
+                            dismiss()
+                            try
+                            await addTripLocal(nameIn: tagName, startPointIn: startPoint, endPointIn: endPoint, iconNameIn: iconName)
+                        }
+                        catch{
+                            //how do I show them the error? alerts are deprecated, Should I set the button unclickable? How?
+                            print("Missing field")
+                        }
                     }
                 }, label: {
                     Text("Done")
@@ -70,19 +73,16 @@ enum FormSubmissionError: Error {
     case anyOtherKindofError
 }
 
-private func addTripLocal(nameIn: String, startPointIn: Station, endPointIn: Station, iconNameIn: String) throws{
+private func addTripLocal(nameIn: String, startPointIn: Station, endPointIn: Station, iconNameIn: String) async throws{
     
     guard startPointIn.name != "" && endPointIn.name != "" else {throw FormSubmissionError.missingInput}
     
     let tripId: UUID = UUID()
-    var tripName = nameIn
-    var startPoint = startPointIn
-    var endPoint = endPointIn
-    var iconName = iconNameIn
+    let tripName = nameIn
     
     let newTrip: SavedTrip = SavedTrip(id: tripId, name: tripName, startPoint: startPointIn, endPoint: endPointIn, iconName: iconNameIn)
     
-    TripViewModel.shared.saveJsonFile(newSavedTrip: newTrip)
+    await TripViewModel.shared.saveJsonFile(newSavedTrip: newTrip)
     
 }
 

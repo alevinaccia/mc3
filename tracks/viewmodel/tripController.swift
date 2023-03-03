@@ -15,9 +15,10 @@ class TripViewModel: ObservableObject{
     @Published var userTrips: [Trip] = []
     @Published var savedTrips: [SavedTrip] = []
     
-    func saveJsonFile(newSavedTrip : SavedTrip){
+    func saveJsonFile(newSavedTrip : SavedTrip) async {
         savedTrips.append(newSavedTrip)
         writeData(savedTrips: savedTrips)
+        await self.generateTrips()
     }
     
     func writeData(savedTrips : [SavedTrip]) -> Void {
@@ -29,6 +30,18 @@ class TripViewModel: ObservableObject{
             try JSONEncoder()
                 .encode(savedTrips)
                 .write(to: fileURL)
+        } catch {
+            print("error writing data")
+        }
+    }
+    
+    func clearData() -> Void {
+        do {
+            let fileURL = try FileManager.default
+                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                .appendingPathComponent("data.json")
+            print(fileURL)
+            try "".write(to: fileURL, atomically: false, encoding: .utf8)
         } catch {
             print("error writing data")
         }

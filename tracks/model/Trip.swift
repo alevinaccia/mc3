@@ -39,7 +39,6 @@ struct Trip : Identifiable, Hashable{
             self.possibleTrains = try await ApiController.shared.getPossibleTrains(from: startPoint.code, to: endPoint.code)
             for train in possibleTrains {
                 let now = Date().timeIntervalSince1970
-                print(train.timeAtMyStation, now)
                 self.nextArrivals.append(String(Int(Double(train.timeAtMyStation) - now)/60))
             }
         } catch {

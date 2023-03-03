@@ -33,11 +33,14 @@ struct ContentView: View {
                 do {
                     try await TripViewModel.shared.readData()
                     trips = TripViewModel.shared.userTrips
+                    //TripViewModel.shared.clearData()
                 }
                 catch {
                     TripViewModel.shared.userTrips = []
                 }
             
+            }.refreshable {
+                
             }
             .navigationTitle("My routes")
         }.fullScreenCover(isPresented: $shouldShowOnboarding, content: {
