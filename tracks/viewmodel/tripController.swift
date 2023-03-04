@@ -10,10 +10,11 @@ import Foundation
 class TripViewModel: ObservableObject{
     
     static var shared : TripViewModel = TripViewModel()
-    private init(){
-    }
+    private init() { }
+    
     @Published var userTrips: [Trip] = []
     @Published var savedTrips: [SavedTrip] = []
+    @Published var reloader : Int = 0
     
     func saveJsonFile(newSavedTrip : SavedTrip) async {
         savedTrips.append(newSavedTrip)
@@ -58,6 +59,7 @@ class TripViewModel: ObservableObject{
             let arrayTrips = try JSONDecoder().decode([SavedTrip].self, from: data)
             
             TripViewModel.shared.savedTrips = arrayTrips
+            
             await self.generateTrips()
             
         } catch {
@@ -65,10 +67,18 @@ class TripViewModel: ObservableObject{
         }
     }
     
+    func updateTrips() async {
+        await userTrips[0].updateTrips()
+        reloader += 1
+        print(userTrips[0].nextArrivals, userTrips[0].name)
+    }
+    
     func generateTrips() async{
         for savedTrip in savedTrips {
             var newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint)
+            
             await newTrip.updateTrips()
+            
             TripViewModel.shared.userTrips.append(newTrip)
         }
     }

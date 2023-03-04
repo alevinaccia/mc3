@@ -3,7 +3,7 @@ import Foundation
 
 struct CardView: View {
     //EXAMPLE
-    let trip : Trip
+    @Binding var trip : Trip
     
     var body: some View {
         ZStack{
@@ -36,7 +36,7 @@ struct CardView: View {
                     
                 }.padding(.top)
                 
-                Text("\(trip.startPoint.name + " Arrive " + trip.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
+                Text("\(trip.startPoint.name + " -> " + trip.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
                     .padding(.leading)
                 
                 HStack{
@@ -45,7 +45,7 @@ struct CardView: View {
                             Text("\(trip.nextArrivals[0]) mins")
                                 .padding(4)
                                 
-                            Text("14")
+                            Text(trip.possibleTrains[0].track)
                                 .fontWeight(.semibold)
                                 .padding(5)
                                 .background(Color("Binario"))
@@ -54,7 +54,8 @@ struct CardView: View {
                         }.padding(6)
                             .background(Color("Tuorlo"))
                             .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-                    }.padding(5)
+                    }
+                    .padding(5)
                     
                     Image(systemName: "arrow.right")
                     //Image(systemName: "greaterthan")
@@ -65,7 +66,7 @@ struct CardView: View {
                             Text("\(trip.nextArrivals[1]) mins")
                                 .padding(4)
                                 
-                            Text("10")
+                            Text(trip.possibleTrains[1].track)
                                 .fontWeight(.semibold)
                                 .padding(5)
                                 .background(Color("Binario"))

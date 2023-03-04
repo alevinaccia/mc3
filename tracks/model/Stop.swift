@@ -31,14 +31,16 @@ struct Stop: Decodable {
 
 struct testStruct : Decodable {
     enum CodingKeys: String, CodingKey {
-        case numeroTreno, destinazione
+        case numeroTreno, destinazione, binarioProgrammatoPartenzaDescrizione, binarioEffettivoPartenzaDescrizione
     }
     var trainCode : String
     let destination : String
+    let track : String?
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.trainCode = String(try container.decode(Int.self, forKey: .numeroTreno))
         self.destination = try container.decode(String.self, forKey: .destinazione)
+        self.track = try container.decode(String?.self, forKey: .binarioEffettivoPartenzaDescrizione) ?? container.decode(String?.self, forKey: .binarioProgrammatoPartenzaDescrizione)
     }
 }

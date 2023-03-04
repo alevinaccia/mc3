@@ -21,6 +21,7 @@ struct TrainStatus: Decodable, Hashable {
     let delay: Int
     let stops : [Stop]
     let departed : Bool
+    var track : String
     var timeAtMyStation : Int
     
     init(from decoder: Decoder) throws {
@@ -31,10 +32,11 @@ struct TrainStatus: Decodable, Hashable {
         self.delay = try container.decode(Int.self, forKey: .ritardo)
         self.stops = try container.decode([Stop].self, forKey: .fermate)
         self.departed = try container.decode([String].self, forKey: .compInStazionePartenza).contains(where: {$0 == "Partito"})
+        self.track = "-"
         self.timeAtMyStation = 0
     }
     
-    init(departStation : String, arrivalStation : String, trainNumber : Int, delay : Int, stops : [Stop], departed : Bool, time : Int) {
+    init(departStation : String, arrivalStation : String, trainNumber : Int, delay : Int, stops : [Stop], departed : Bool, time : Int, track : String) {
         self.departStation = departStation
         self.arrivalStation = arrivalStation
         self.trainNumber = trainNumber
@@ -42,6 +44,11 @@ struct TrainStatus: Decodable, Hashable {
         self.stops = stops
         self.departed = departed
         self.timeAtMyStation = time
+        self.track = track
+    }
+    
+    mutating func setTrack(track : String){
+        self.track = track
     }
     
     mutating func setTime(station : String){

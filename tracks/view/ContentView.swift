@@ -10,37 +10,44 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     @State private var showingSheet = false
-    @State var trips = TripViewModel.shared.userTrips
+    @StateObject var tripVM = TripViewModel.shared
     
     var body: some View {
         
         NavigationView {
             VStack{
                 ForEach(0..<4) { i in
-                    if(trips.isEmpty){
+                    if(tripVM.userTrips.isEmpty){
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
-                    else if (i < trips.count){
-                        CardView(trip: trips[i])
+                    else if (i < tripVM.userTrips.count){
+                        CardView(trip: $tripVM.userTrips[i])
                     }
                     else{
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
                 }
-                
-                
-            }.task {
+                Button {
+                    
+                    Task{
+                        await tripVM.updateTrips()
+                        print("done")
+                    }
+                    
+                } label: {
+                    Text("refresh + \(tripVM.reloader)")
+                }
+
+            }
+            .task {
                 do {
                     try await TripViewModel.shared.readData()
-                    trips = TripViewModel.shared.userTrips
                     //TripViewModel.shared.clearData()
                 }
                 catch {
                     TripViewModel.shared.userTrips = []
                 }
             
-            }.refreshable {
-                
             }
             .navigationTitle("My routes")
         }.fullScreenCover(isPresented: $shouldShowOnboarding, content: {
