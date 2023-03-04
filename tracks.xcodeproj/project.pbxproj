@@ -26,6 +26,8 @@
 		3B863D4D29AE19F700B606AE /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4B29AE19F700B606AE /* Station.swift */; };
 		3B863D4E29AE19F700B606AE /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4B29AE19F700B606AE /* Station.swift */; };
 		3B863D5029AF449700B606AE /* onBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4F29AF449700B606AE /* onBoarding.swift */; };
+		3B8936B929B20A5100591672 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936B829B20A5100591672 /* firstView.swift */; };
+		3B8936BB29B2157A00591672 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BA29B2157A00591672 /* secondView.swift */; };
 		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
 		C00BDD6F29A8CA1D009254A3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */; };
 		C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */; };
@@ -116,6 +118,8 @@
 		3B863D4929AE16D100B606AE /* SavedTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTrip.swift; sourceTree = "<group>"; };
 		3B863D4B29AE19F700B606AE /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		3B863D4F29AF449700B606AE /* onBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoarding.swift; sourceTree = "<group>"; };
+		3B8936B829B20A5100591672 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
+		3B8936BA29B2157A00591672 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
 		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -290,6 +294,8 @@
 				3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */,
 				3B863D4129A8D03E00B606AE /* iconSelector.swift */,
 				3B863D4F29AF449700B606AE /* onBoarding.swift */,
+				3B8936B829B20A5100591672 /* firstView.swift */,
+				3B8936BA29B2157A00591672 /* secondView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -493,9 +499,11 @@
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
+				3B8936BB29B2157A00591672 /* secondView.swift in Sources */,
 				3B863D4C29AE19F700B606AE /* Station.swift in Sources */,
 				3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
+				3B8936B929B20A5100591672 /* firstView.swift in Sources */,
 				C01F724129AD172F00522F3F /* Stop.swift in Sources */,
 				3B863D5029AF449700B606AE /* onBoarding.swift in Sources */,
 				C0109E01299E43850075F6D1 /* tracks.swift in Sources */,

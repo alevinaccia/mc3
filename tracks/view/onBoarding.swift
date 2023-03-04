@@ -14,20 +14,13 @@ struct onboardingView: View {
     @Binding var shouldShowOnboarding: Bool
     var body: some View {
         TabView {
-            PageView (
-                title: "About Hug MHe" ,
-                subtitle: "An app to face and learn about mental health, with a virtual friend!",
-                imageName: "1",
-                showDismissButton: false,
-                shouldShowOnboarding: $shouldShowOnboarding)
-        
-            PageView (
-                title: "What you can do",
-                subtitle: "You can chat with Mhera, your AI assistant, who will guide you on your own magical journey.",
-                imageName: "2",
-                showDismissButton: false,
-                shouldShowOnboarding: $shouldShowOnboarding)
-                
+            //PRIMA PAGINA
+            firstView(showDismissButton: false, shouldShowOnboarding: $shouldShowOnboarding)
+            //SECONDA PAGINA
+            secondView(showDismissButton: false, shouldShowOnboarding: $shouldShowOnboarding)
+            //TERZA PAGINA
+            
+            //QUARTA PAGINA
             PageView (
                 title: "Hi! I’m Mhera!",
                 subtitle: "I’m your virtual friend. I’ll help you keep track of your feelings and learning new things about mental health!",
@@ -79,7 +72,7 @@ struct PageView: View {
                     Text ("Get Started")
                         .bold()
                         .frame(width: 200, height: 50)
-                        .background(Color.green)
+                        .background(Color("Notte"))
                         .foregroundColor(Color.white)
                         .cornerRadius(20)
                     
