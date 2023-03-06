@@ -58,4 +58,12 @@ struct Trip : Identifiable, Hashable{
             print(error)
         }
     }
+    
+    func toDictionary()->[String:String]{
+        var dict = [String:String]()
+        dict["name"] = self.name
+        dict["first"] = self.nextArrivals[0]
+        dict["second"] = self.nextArrivals[1]
+        return dict
+    }
 }

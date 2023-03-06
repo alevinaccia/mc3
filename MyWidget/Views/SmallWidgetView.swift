@@ -2,9 +2,9 @@
 import SwiftUI
 
 struct SmallWidgetView: View {
-    var entry: SimpleEntry
+    //var entry: SimpleEntry
     //EXAMPLE
-    let card : Trip = Trip(id: UUID(), name: "AAA", startPoint: Station(name: "ee", code: "ee"), endPoint: Station(name: "ee", code: "ee"))
+    let card : Trip
         var now = Date.now.formatted()
 
 

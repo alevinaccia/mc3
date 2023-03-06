@@ -68,9 +68,23 @@ class TripViewModel: ObservableObject{
     }
     
     func updateTrips() async {
-        await userTrips[0].updateTrips()
-        reloader += 1
-        print(userTrips[0].nextArrivals, userTrips[0].name)
+        for index in userTrips.indices {
+            await userTrips[index].updateTrips()
+            reloader += 1
+        }
+    }
+    
+    func deleteTrip(id : UUID) async throws {
+        let index = savedTrips.firstIndex(where: {$0.id == id})!
+        savedTrips.remove(at: index)
+        do {
+            self.writeData(savedTrips: savedTrips)
+            try await self.readData()
+            await self.generateTrips()
+        } catch {
+            print("rrorr")
+        }
+        
     }
     
     func generateTrips() async{
@@ -79,7 +93,7 @@ class TripViewModel: ObservableObject{
             
             await newTrip.updateTrips()
             
-            TripViewModel.shared.userTrips.append(newTrip)
+            userTrips.append(newTrip)
         }
     }
 }

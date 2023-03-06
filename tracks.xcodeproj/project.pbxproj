@@ -15,7 +15,6 @@
 		2ADA500B29ADFAD1000DB962 /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
 		2ADA500D29ADFB7F000DB962 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA500C29ADFB7F000DB962 /* ButtonView.swift */; };
 		2ADA500E29ADFBFA000DB962 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA500C29ADFB7F000DB962 /* ButtonView.swift */; };
-		2ADA500F29ADFDDF000DB962 /* SelectedRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */; };
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
@@ -28,6 +27,8 @@
 		3B863D5029AF449700B606AE /* onBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4F29AF449700B606AE /* onBoarding.swift */; };
 		3B8936B929B20A5100591672 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936B829B20A5100591672 /* firstView.swift */; };
 		3B8936BB29B2157A00591672 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BA29B2157A00591672 /* secondView.swift */; };
+		C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */; };
+		C008FC7329B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */; };
 		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
 		C00BDD6F29A8CA1D009254A3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */; };
 		C00BDD7129A8CA1D009254A3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C00BDD7029A8CA1D009254A3 /* SwiftUI.framework */; };
@@ -56,6 +57,11 @@
 		C0577D4A29ADEDEA005619F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01F724429AD174C00522F3F /* Assets.xcassets */; };
 		C0577D4C29ADEE0D005619F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0577D4B29ADEE0D005619F4 /* Assets.xcassets */; };
 		C0577D4D29ADEE97005619F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0109E04299E43870075F6D1 /* Assets.xcassets */; };
+		C06A8D9829B5DB25008BE0C2 /* tripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4729ADFB6700B606AE /* tripController.swift */; };
+		C06A8D9929B5DBA6008BE0C2 /* SavedTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4929AE16D100B606AE /* SavedTrip.swift */; };
+		C06A8D9A29B5DC8C008BE0C2 /* tripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4729ADFB6700B606AE /* tripController.swift */; };
+		C06A8D9B29B5DC90008BE0C2 /* SavedTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4929AE16D100B606AE /* SavedTrip.swift */; };
+		C06A8D9D29B5DD5D008BE0C2 /* timeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A8D9C29B5DD5D008BE0C2 /* timeComponent.swift */; };
 		C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBA29A4C14100DE5B28 /* searchTrip.swift */; };
 		C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEC029A77A4400DE5B28 /* tripCard.swift */; };
 		C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
@@ -120,6 +126,7 @@
 		3B863D4F29AF449700B606AE /* onBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoarding.swift; sourceTree = "<group>"; };
 		3B8936B829B20A5100591672 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
 		3B8936BA29B2157A00591672 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
+		C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchConnectivityManager.swift; sourceTree = "<group>"; };
 		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
 		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00BDD6E29A8CA1D009254A3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -140,6 +147,7 @@
 		C01F723A29AD172F00522F3F /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		C01F724429AD174C00522F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Tracks Watch App/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		C0577D4B29ADEE0D005619F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tracks/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C06A8D9C29B5DD5D008BE0C2 /* timeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeComponent.swift; sourceTree = "<group>"; };
 		C085DEBA29A4C14100DE5B28 /* searchTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTrip.swift; sourceTree = "<group>"; };
 		C085DEC029A77A4400DE5B28 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCard.swift; sourceTree = "<group>"; };
 		C09DF9E9299F74E3007EE4FD /* apiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiController.swift; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 				2A889BDC29A8D6420077BE2B /* SelectedRouteView.swift */,
 				2AD4386B29ACAC6E000B19CD /* RoutesView.swift */,
 				2ADA500C29ADFB7F000DB962 /* ButtonView.swift */,
+				C06A8D9C29B5DD5D008BE0C2 /* timeComponent.swift */,
 				2A889BE029A8D6430077BE2B /* Preview Content */,
 			);
 			path = "Tracks Watch App";
@@ -242,6 +251,7 @@
 		C0109DF4299E43850075F6D1 = {
 			isa = PBXGroup;
 			children = (
+				C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */,
 				C0109DFF299E43850075F6D1 /* tracks */,
 				C00BDD7229A8CA1D009254A3 /* MyWidget */,
 				2A889BD929A8D6420077BE2B /* Tracks Watch App */,
@@ -454,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06A8D9D29B5DD5D008BE0C2 /* timeComponent.swift in Sources */,
 				2ADA500B29ADFAD1000DB962 /* RoutesView.swift in Sources */,
 				3B863D4E29AE19F700B606AE /* Station.swift in Sources */,
 				C01F723D29AD172F00522F3F /* Trip.swift in Sources */,
@@ -462,6 +473,9 @@
 				2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */,
 				C01F724029AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C02662E329AD10E30071F9FA /* apiController.swift in Sources */,
+				C06A8D9829B5DB25008BE0C2 /* tripController.swift in Sources */,
+				C06A8D9929B5DBA6008BE0C2 /* SavedTrip.swift in Sources */,
+				C008FC7329B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */,
 				C01F724329AD172F00522F3F /* Stop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,9 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06A8D9B29B5DC90008BE0C2 /* SavedTrip.swift in Sources */,
 				C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */,
 				2AD4386D29ACAC6E000B19CD /* RoutesView.swift in Sources */,
-				2ADA500F29ADFDDF000DB962 /* SelectedRouteView.swift in Sources */,
 				2ADA500E29ADFBFA000DB962 /* ButtonView.swift in Sources */,
 				C01F724229AD172F00522F3F /* Stop.swift in Sources */,
 				C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */,
@@ -480,6 +494,7 @@
 				C04CF00A29A8CCC800917586 /* apiController.swift in Sources */,
 				C01F723C29AD172F00522F3F /* Trip.swift in Sources */,
 				C01F723F29AD172F00522F3F /* TrainStatus.swift in Sources */,
+				C06A8D9A29B5DC8C008BE0C2 /* tripController.swift in Sources */,
 				3B863D4D29AE19F700B606AE /* Station.swift in Sources */,
 				C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */,
 			);
@@ -495,6 +510,7 @@
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
 				3B863D4829ADFB6700B606AE /* tripController.swift in Sources */,
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
+				C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */,
 				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,

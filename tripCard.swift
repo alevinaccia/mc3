@@ -18,21 +18,6 @@ struct CardView: View {
                         .bold()
                         .padding(.leading)
                     Spacer()
-                    Text("\(Image(systemName: "ellipsis.circle"))")
-                        .padding(.trailing)
-                        .contextMenu {
-                            Button {
-                                print("Edit")
-                            } label: {
-                                Label("Choose Country", systemImage: "globe")
-                            }
-
-                            Button {
-                                print("Delete")
-                            } label: {
-                                Label("Detect Location", systemImage: "location.circle")
-                            }
-                        }
                     
                 }.padding(.top)
                 
@@ -102,6 +87,7 @@ struct CardView: View {
                 }
             }
         }
+        
         .frame(width: 329, height: 155)
     }
 }

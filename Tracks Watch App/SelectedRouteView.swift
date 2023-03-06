@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct SelectedRouteView: View {
+    @StateObject var tripVM = TripViewModel.shared
+    @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
+    
     var body: some View {
         VStack {
             HStack{
                 Spacer()
                 Image(systemName: "house")
-                Text("Home")
+                Text(connectivityManager.notificationName?.text ?? "Home")
                     .fontWeight(.semibold)
                 Spacer()
                 
@@ -24,7 +27,7 @@ struct SelectedRouteView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width: 134.0, height: 33.0)
                     .foregroundColor (Color( "Tuorlo"))
-                Text("5 mins")
+                Text("\(connectivityManager.notificationFirst?.text ?? "-")  mins")
                     .fontWeight(.semibold)
                     .foregroundColor(Color("Notte"))
                     
@@ -37,7 +40,7 @@ struct SelectedRouteView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width: 134.0, height: 33.0)
                     .foregroundColor (Color( "Tuorlo"))
-                Text("10 mins")
+                Text("\(connectivityManager.notificationSecond?.text ?? "-")  mins")
                     .fontWeight(.semibold)
                     .foregroundColor(Color("Notte"))
                     

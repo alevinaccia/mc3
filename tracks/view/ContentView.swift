@@ -11,6 +11,7 @@ struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     @State private var showingSheet = false
     @StateObject var tripVM = TripViewModel.shared
+    @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
     
     var body: some View {
         
@@ -21,7 +22,19 @@ struct ContentView: View {
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
                     else if (i < tripVM.userTrips.count){
-                        CardView(trip: $tripVM.userTrips[i])
+                        CardView(trip: $tripVM.userTrips[i]).contextMenu {
+                            Button {
+                                print("Change country setting")
+                            } label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                            
+                            Button {
+                                
+                            } label: {
+                                Label("Delete Trip", systemImage: "location.circle").accentColor(.red)
+                            }
+                        }
                     }
                     else{
                         CardViewEmpty(showingSheet: $showingSheet)
@@ -31,17 +44,18 @@ struct ContentView: View {
                     
                     Task{
                         await tripVM.updateTrips()
+                        WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
                         print("done")
                     }
                     
                 } label: {
                     Text("refresh + \(tripVM.reloader)")
                 }
-
             }
             .task {
                 do {
                     try await TripViewModel.shared.readData()
+                    WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
                     //TripViewModel.shared.clearData()
                 }
                 catch {

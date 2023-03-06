@@ -39,15 +39,16 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct MyWidgetEntryView : View {
+    
     @Environment(\.widgetFamily) var widgetFamily
     var entry: Provider.Entry
 
     var body: some View {
         switch widgetFamily{
         case .systemMedium:
-            MediumWidgetView(entry: entry)
+            MediumWidgetView(card: TripViewModel.shared.userTrips.first ?? Trip())
         case .systemSmall:
-            SmallWidgetView(entry: entry)
+            SmallWidgetView(card: TripViewModel.shared.userTrips.first ?? Trip())
         default:
             Text("Not implemented")
         }
