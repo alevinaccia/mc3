@@ -20,16 +20,17 @@ struct Trip : Identifiable, Hashable{
     var possibleTrains : [TrainStatus]
     let startPoint : Station
     let endPoint : Station
-    var nextArrivals : [String] = []
+    var nextArrivals : [String] = ["-","-"]
+    var iconName : String = ""
     //dati mapkit (location, distanza, tempo)
     
-    init(id: UUID, name: String, startPoint: Station, endPoint: Station){
+    init(id: UUID, name: String, startPoint: Station, endPoint: Station, icon : String){
         self.id = id
         self.name = name
         self.startPoint = startPoint
         self.endPoint = endPoint
         self.possibleTrains = []
-        self.nextArrivals = []
+        self.iconName = icon
     }
     
     init(){
@@ -38,13 +39,8 @@ struct Trip : Identifiable, Hashable{
         self.possibleTrains = []
         self.startPoint = Station()
         self.endPoint = Station()
-        self.nextArrivals = []
     }
-    
-    mutating func changeName() {
-        self.name = "chamge"
-    }
-    
+
     mutating func updateTrips() async{
         //update delays
         do {

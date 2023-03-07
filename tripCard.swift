@@ -12,7 +12,7 @@ struct CardView: View {
                 .frame(width: 329, height: 155)
             VStack(alignment: .leading){
                 HStack{
-                    Text("\(Image(systemName: "house")) \(trip.name)" )
+                    Text("\(Image(systemName: trip.iconName)) \(trip.name)" )
                         .font(.system(size: 18))
                         .fontWeight(.bold)
                         .bold()
@@ -30,7 +30,7 @@ struct CardView: View {
                             Text("\(trip.nextArrivals[0]) mins")
                                 .padding(4)
                                 
-                            Text(trip.possibleTrains[0].track)
+                            Text(trip.possibleTrains.isEmpty ? ("-") : trip.possibleTrains[0].track)
                                 .fontWeight(.semibold)
                                 .padding(5)
                                 .background(Color("Binario"))
@@ -51,7 +51,7 @@ struct CardView: View {
                             Text("\(trip.nextArrivals[1]) mins")
                                 .padding(4)
                                 
-                            Text(trip.possibleTrains[1].track)
+                            Text(trip.possibleTrains.isEmpty ? ("-") : trip.possibleTrains[1].track)
                                 .fontWeight(.semibold)
                                 .padding(5)
                                 .background(Color("Binario"))

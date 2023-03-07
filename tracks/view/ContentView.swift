@@ -40,8 +40,8 @@ struct ContentView: View {
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
                 }
+                Text("Last update : \(tripVM.lastUpdate)")
                 Button {
-                    
                     Task{
                         await tripVM.updateTrips()
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
@@ -49,14 +49,14 @@ struct ContentView: View {
                     }
                     
                 } label: {
-                    Text("refresh + \(tripVM.reloader)")
+                    Text("refresh")
                 }
             }
             .task {
                 do {
                     try await TripViewModel.shared.readData()
                     WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
-                    //TripViewModel.shared.clearData()
+                    TripViewModel.shared.clearData()
                 }
                 catch {
                     TripViewModel.shared.userTrips = []
@@ -64,7 +64,8 @@ struct ContentView: View {
             
             }
             .navigationTitle("My routes")
-        }.fullScreenCover(isPresented: $shouldShowOnboarding, content: {
+        }
+        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             onboardingView (shouldShowOnboarding: $shouldShowOnboarding)
     })
     }
