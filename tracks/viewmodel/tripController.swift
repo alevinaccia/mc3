@@ -14,7 +14,7 @@ class TripViewModel: ObservableObject{
     
     @Published var userTrips: [Trip] = []
     @Published var savedTrips: [SavedTrip] = []
-    @Published var reloader : Int = 0
+    @Published var lastUpdate : String = ""
     
     func saveJsonFile(newSavedTrip : SavedTrip) async {
         savedTrips.append(newSavedTrip)
@@ -27,7 +27,6 @@ class TripViewModel: ObservableObject{
             let fileURL = try FileManager.default
                 .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                 .appendingPathComponent("data.json")
-            print(fileURL)
             try JSONEncoder()
                 .encode(savedTrips)
                 .write(to: fileURL)
@@ -41,7 +40,6 @@ class TripViewModel: ObservableObject{
             let fileURL = try FileManager.default
                 .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                 .appendingPathComponent("data.json")
-            print(fileURL)
             try "".write(to: fileURL, atomically: false, encoding: .utf8)
         } catch {
             print("error writing data")
@@ -68,10 +66,13 @@ class TripViewModel: ObservableObject{
     }
     
     func updateTrips() async {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
         for index in userTrips.indices {
             await userTrips[index].updateTrips()
-            reloader += 1
         }
+        self.lastUpdate = dateFormatter.string(from: Date())
     }
     
     func deleteTrip(id : UUID) async throws {
@@ -88,12 +89,11 @@ class TripViewModel: ObservableObject{
     }
     
     func generateTrips() async{
+        userTrips = []
         for savedTrip in savedTrips {
-            var newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint)
-            
-            await newTrip.updateTrips()
-            
+            let newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint, icon: savedTrip.iconName)
             userTrips.append(newTrip)
         }
+        await self.updateTrips()
     }
 }

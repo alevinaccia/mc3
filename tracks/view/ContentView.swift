@@ -42,8 +42,8 @@ struct ContentView: View {
                         CardViewEmpty(showingSheet: $showingSheet)
                     }
                 }
+                Text("Last update : \(tripVM.lastUpdate)")
                 Button {
-                    
                     Task{
                         await tripVM.updateTrips()
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
@@ -51,7 +51,7 @@ struct ContentView: View {
                     }
                     
                 } label: {
-                    Text("refresh + \(tripVM.reloader)")
+                    Text("refresh")
                 }
             }
             .task {
@@ -59,7 +59,7 @@ struct ContentView: View {
                 do {
                     try await TripViewModel.shared.readData()
                     WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
-                    //TripViewModel.shared.clearData()
+                    TripViewModel.shared.clearData()
                 }
                 catch {
                     TripViewModel.shared.userTrips = []

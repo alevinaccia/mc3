@@ -57,13 +57,13 @@ struct iconSelector: View {
                         ForEach(iconsArray, id: \.self){ icon in
                             Button {
                                 print(icon)
-                                selectedIcon = icon
+                                iconName = icon
                                 colorDefault = "Tuorlo"
                             } label: {
                                 Text("\(Image(systemName: "\(icon)"))")
                                     .foregroundColor(.white)
                                     .padding()
-                                    .background(Color( icon == selectedIcon ? "Tuorlo" : "Notte" ))
+                                    .background(Color( icon == iconName ? "Tuorlo" : "Notte" ))
                                     .clipShape(Circle())
                             }
                         }

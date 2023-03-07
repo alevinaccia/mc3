@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let dateFormatter = DateFormatter()
+
 struct SelectedRouteView: View {
     @StateObject var tripVM = TripViewModel.shared
     @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
@@ -47,16 +49,11 @@ struct SelectedRouteView: View {
                     
             }
         Spacer()
-            HStack {
-                
-                Text("300 mt")
-                    .fontWeight(.semibold)
-                Image(systemName: "train.side.front.car")
-            }
-            .padding(.bottom, 20.0)
-            Text("Refreshed at 8:28")
+            Text("Last update \(dateFormatter.string(from: Date()))")
                 .fontWeight(.thin)
            
+        }.onAppear{
+            dateFormatter.dateFormat = "HH:mm"
         }
         .padding()
         .background(Color("Notte"))
