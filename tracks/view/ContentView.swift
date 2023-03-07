@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
-    @State private var showingSheet = false
+    
     @StateObject var tripVM = TripViewModel.shared
     @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
+    
+    @State private var showingSheet = false
     
     var body: some View {
         
@@ -53,6 +55,7 @@ struct ContentView: View {
                 }
             }
             .task {
+                
                 do {
                     try await TripViewModel.shared.readData()
                     WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
@@ -64,8 +67,9 @@ struct ContentView: View {
             
             }
             .navigationTitle("My routes")
-        }.fullScreenCover(isPresented: $shouldShowOnboarding, content: {
-            onboardingView (shouldShowOnboarding: $shouldShowOnboarding)
+        }
+        .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
+            onboardingView(shouldShowOnboarding: $shouldShowOnboarding)
     })
     }
 }

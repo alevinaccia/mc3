@@ -15,71 +15,65 @@ struct onboardingView: View {
     var body: some View {
         TabView {
             //PRIMA PAGINA
-            firstView(showDismissButton: false, shouldShowOnboarding: $shouldShowOnboarding)
+            firstView()
             //SECONDA PAGINA
-            secondView(showDismissButton: false, shouldShowOnboarding: $shouldShowOnboarding)
+            secondView()
             //TERZA PAGINA
-            
+            thirdView()
             //QUARTA PAGINA
-            PageView (
-                title: "Hi! I’m Mhera!",
-                subtitle: "I’m your virtual friend. I’ll help you keep track of your feelings and learning new things about mental health!",
-                imageName: "3",
+            lastPageView (
+//                text1: "Are you ready?",
+//                text2: "Start by adding your train routes.",
                 showDismissButton: true,
                 shouldShowOnboarding: $shouldShowOnboarding)
-            
-            
         }
-        .frame(height: 700)
+        .ignoresSafeArea()
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .indexViewStyle(PageIndexViewStyle())
     }
 }
 
-struct PageView: View {
-    let title: String
-    let subtitle: String
-    let imageName: String
+struct lastPageView: View {
+    let text1: String = "Are you ready?"
+    let text2: String = "Start by adding your train routes."
     let showDismissButton: Bool
+    
     @Binding var shouldShowOnboarding: Bool
     
-    
-    var body: some View{
-        VStack {
-        Image (imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 250, height: 250)
-                .padding()
-        Text (title)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding()
-    
-        Text (subtitle)
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .padding()
-                .foregroundColor(Color(.secondaryLabel))
-            
-            if showDismissButton {
-            Button (action: {
-            shouldShowOnboarding.toggle()
-                },
-                    label: {
-                    Text ("Get Started")
-                        .bold()
-                        .frame(width: 200, height: 50)
-                        .background(Color("Notte"))
-                        .foregroundColor(Color.white)
-                        .cornerRadius(20)
-                    
-                })
+    let backgroundImage = Image("Onboarding4")
+    var body: some View {
+        ZStack{
+            backgroundImage.resizable()
+                .scaledToFill()
+            VStack {
+                Spacer()
+                Text (text1)
+                    .font(.headline)
+                
+                Text (text2)
+                    .font(.headline)
+                    .padding()
+
+                
+                if showDismissButton {
+                    Button (action: {
+                        shouldShowOnboarding.toggle()
+                    },
+                            label: {
+                        Text ("Get Started")
+                            .bold()
+                            .frame(width: 200, height: 50)
+                            .background(Color("Notte"))
+                            .foregroundColor(Color.white)
+                            .cornerRadius(20)
+                        
+                    }).padding(.top, 64)
+                        .padding(.bottom, 100)
+                }
+                
             }
-        
-        }
+        }.ignoresSafeArea()
     }
 }
 

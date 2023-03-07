@@ -27,6 +27,7 @@
 		3B863D5029AF449700B606AE /* onBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4F29AF449700B606AE /* onBoarding.swift */; };
 		3B8936B929B20A5100591672 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936B829B20A5100591672 /* firstView.swift */; };
 		3B8936BB29B2157A00591672 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BA29B2157A00591672 /* secondView.swift */; };
+		3B8936BD29B728A000591672 /* thirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BC29B728A000591672 /* thirdView.swift */; };
 		C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */; };
 		C008FC7329B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */; };
 		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
@@ -126,6 +127,7 @@
 		3B863D4F29AF449700B606AE /* onBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoarding.swift; sourceTree = "<group>"; };
 		3B8936B829B20A5100591672 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
 		3B8936BA29B2157A00591672 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
+		3B8936BC29B728A000591672 /* thirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdView.swift; sourceTree = "<group>"; };
 		C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchConnectivityManager.swift; sourceTree = "<group>"; };
 		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
 		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +308,7 @@
 				3B863D4F29AF449700B606AE /* onBoarding.swift */,
 				3B8936B829B20A5100591672 /* firstView.swift */,
 				3B8936BA29B2157A00591672 /* secondView.swift */,
+				3B8936BC29B728A000591672 /* thirdView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
 				C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */,
 				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
+				3B8936BD29B728A000591672 /* thirdView.swift in Sources */,
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
@@ -556,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
@@ -588,7 +592,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
@@ -618,7 +622,7 @@
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
@@ -646,7 +650,7 @@
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
@@ -790,7 +794,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tracks/Info.plist;
@@ -822,7 +826,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tracks/Info.plist;

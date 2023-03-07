@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct firstView: View {
-    let backgroundImage = Image("backgroundPattern")
-    let showDismissButton: Bool
-    @Binding var shouldShowOnboarding: Bool
+    let backgroundImage = Image("Onboarding1")
     
     var body: some View {
         ZStack{
-            backgroundImage
+            backgroundImage.resizable()
+                .scaledToFill()
             VStack(alignment: .leading, spacing: 15){
                 Text("Welcome to TRACKS!")
                     .bold()
@@ -29,6 +28,6 @@ struct firstView: View {
 
 struct firstView_Previews: PreviewProvider {
     static var previews: some View {
-        firstView(showDismissButton: false, shouldShowOnboarding: .constant(false))
+        firstView()
     }
 }
