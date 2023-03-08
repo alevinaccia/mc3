@@ -17,47 +17,44 @@ struct tripEditSheetView: View {
     @State var tagName : String = ""
     @State var iconName : String = ""
     
+    @State var flagTextField1 : Bool = false
+    @State var flagTextField2 : Bool = false
+    @State var flagWaitResults : Bool = false
     
     //var trip : Trip
-    
+  
     var body: some View {
-        
-        var flagPossibleTrip : Bool = false
         
         NavigationStack(){
             VStack{
-                searchTrip(firstStation: $startPoint, secondStation: $endPoint, possibleTrips: $possibileTrips, tagName: $tagName, iconName: $iconName)
+                searchTrip(firstStation: $startPoint, secondStation: $endPoint, possibleTrips: $possibileTrips, tagName: $tagName, iconName: $iconName, flagTextField1: $flagTextField1, flagTextField2: $flagTextField2, flagWaitResults: $flagWaitResults)
                 
-                if !possibileTrips.isEmpty {
-                    //ci sono delle tratte tra le due selezionate
-                    VStack{
-                        //                List(possibileTrips, id : \.self) { trip in
-                        //                    Text("\(trip.departStation) - \(trip.arrivalStation) \(trip.delay)").onAppear {
-                        //                        print(trip)
-                        //                    }
-                        //                }
-                    }.onAppear(){
-                        flagPossibleTrip = true
-                    }
-                } else {
-                    //non ci sono delle tratte
-                }
+                
             }.navigationBarTitle("Create Event", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
                     Task {
-                        do {
-                            dismiss()
-                            try
-                            await addTripLocal(nameIn: tagName, startPointIn: startPoint, endPointIn: endPoint, iconNameIn: iconName)
-                        }
-                        catch{
-                            //how do I show them the error? alerts are deprecated, Should I set the button unclickable? How?
-                            print("Missing field")
+//                        print("1 \(flagTextField1)")
+//                        print("2 \(tagName.isEmpty)")
+//                        print("3 \(iconName.isEmpty)")
+//                        print("4 \(flagTextField2)")
+                        if(flagTextField1 && flagTextField2 && !tagName.isEmpty && !iconName.isEmpty && !possibileTrips.isEmpty){
+                            
+                            do {
+                                dismiss()
+                                try
+                                await addTripLocal(nameIn: tagName, startPointIn: startPoint, endPointIn: endPoint, iconNameIn: iconName)
+                            }
+                            catch{
+                                //how do I show them the error? alerts are deprecated, Should I set the button unclickable? How?
+                                print("Missing field")
+                            }
                         }
                     }
                 }, label: {
                     Text("Done")
-                }))
+                })
+                    .disabled(!(flagTextField2 && flagTextField1 && !tagName.isEmpty && !iconName.isEmpty && !possibileTrips.isEmpty))
+                )
                 .navigationBarItems(leading: Button(action: {
                     dismiss()
                 }, label: {
