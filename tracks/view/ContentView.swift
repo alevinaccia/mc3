@@ -28,7 +28,6 @@ struct ContentView: View {
                     else if (i < tripVM.userTrips.count){
                         CardView(trip: $tripVM.userTrips[i])
                             .padding()
-                            
                     }
                     else{
                         CardViewEmpty(showingSheet: $showingSheet).padding()
@@ -52,9 +51,13 @@ struct ContentView: View {
             .task {
                 
                 do {
-                    try await TripViewModel.shared.readData()
-                    WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
-                    //TripViewModel.shared.clearData()
+                    if(tripVM.userTrips.isEmpty){
+                        print("usertrip vuoto")
+                    }else{
+                        try await TripViewModel.shared.readData()
+                        WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
+                        //TripViewModel.shared.clearData()
+                    }
                 }
                 catch {
                     TripViewModel.shared.userTrips = []
