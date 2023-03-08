@@ -19,9 +19,24 @@ struct CardView: View {
                         .padding(.leading)
                     Spacer()
                     
+                    Image(systemName: "ellipsis.circle").foregroundColor(Color(.darkGray))
+                        .padding(.trailing)
+//                        .contextMenu {
+//                            Button {
+//                                print("Change country setting")
+//                            } label: {
+//                                Label("Edit", systemImage: "pencil")
+//                            }
+//
+//                            Button {
+//
+//                            } label: {
+//                                Label("Delete Trip", systemImage: "location.circle").accentColor(.red)
+//                            }
+//                        }
                 }.padding(.top)
                 
-                Text("\(trip.startPoint.name + " -> " + trip.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
+                Text("\(trip.startPoint.name + "􀄫" + trip.endPoint.name)").font(.system(size: 14)).foregroundColor(Color.black)
                     .padding(.leading)
                 
                 HStack{
