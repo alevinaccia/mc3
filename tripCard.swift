@@ -4,6 +4,7 @@ import Foundation
 struct CardView: View {
     //EXAMPLE
     @Binding var trip : Trip
+    @Binding var showingSheet : Bool
     
     var body: some View {
         ZStack{
@@ -20,11 +21,11 @@ struct CardView: View {
                     Spacer()
                     Menu{
                         Button {
-                            print("Change country setting")
+                            print("not yet implemented")
+                            //showingSheet.toggle()
                         } label: {
                             Label("Edit", systemImage: "pencil")
                         }
-
                         Button {
                             print("try delete trip")
                             Task{
@@ -120,7 +121,7 @@ struct CardView: View {
                         Text("You are ")
                                 .foregroundColor(.white)
                                 .padding(.leading)
-                        Text("15 mins")
+                        Text("-- mins")
                                 .foregroundColor(Color("Tuorlo"))
                                 .bold()
                         Text("away from the station")

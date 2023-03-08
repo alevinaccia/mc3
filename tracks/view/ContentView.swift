@@ -26,8 +26,12 @@ struct ContentView: View {
                             .padding()
                     }
                     else if (i < tripVM.userTrips.count){
-                        CardView(trip: $tripVM.userTrips[i])
+                        CardView(trip: $tripVM.userTrips[i], showingSheet : $showingSheet)
                             .padding()
+                            .sheet(isPresented: $showingSheet) {
+                                tripEditSheetView(startPoint: tripVM.userTrips[i].startPoint, endPoint: tripVM.userTrips[i].endPoint)
+                            }
+                        
                     }
                     else{
                         CardViewEmpty(showingSheet: $showingSheet).padding()
@@ -51,13 +55,11 @@ struct ContentView: View {
             .task {
                 
                 do {
-                    if(tripVM.userTrips.isEmpty){
-                        print("usertrip vuoto")
-                    }else{
-                        try await TripViewModel.shared.readData()
+                    try await TripViewModel.shared.readData()
+                    if tripVM.userTrips.isEmpty {
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
-                        //TripViewModel.shared.clearData()
                     }
+                        //TripViewModel.shared.clearData()
                 }
                 catch {
                     TripViewModel.shared.userTrips = []
@@ -66,6 +68,7 @@ struct ContentView: View {
             }
             .navigationTitle("My routes")
         }
+      
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             onboardingView(shouldShowOnboarding: $shouldShowOnboarding)
         })

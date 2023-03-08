@@ -19,6 +19,9 @@ struct iconSelector: View {
     @Binding var tagName: String
     @Binding var iconName: String
     
+    @State var flagTag: Bool = false
+    @State var flagIcon: Bool = false
+    
     var body: some View {
         VStack{
             HStack{
