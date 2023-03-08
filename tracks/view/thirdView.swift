@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct thirdView: View {
-    let backgroundImage = Image("Onboarding3")
+    let backgroundImage = Image("Onboarding2")
     var body: some View {
         ZStack{
             backgroundImage.resizable()

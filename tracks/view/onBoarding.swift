@@ -17,7 +17,7 @@ struct onboardingView: View {
             //PRIMA PAGINA
             firstView()
             //SECONDA PAGINA
-            secondView()
+            //secondView()
             //TERZA PAGINA
             thirdView()
             //QUARTA PAGINA
@@ -41,7 +41,7 @@ struct lastPageView: View {
     
     @Binding var shouldShowOnboarding: Bool
     
-    let backgroundImage = Image("Onboarding4")
+    let backgroundImage = Image("Onboarding3")
     var body: some View {
         ZStack{
             backgroundImage.resizable()
