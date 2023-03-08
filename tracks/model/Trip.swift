@@ -60,6 +60,13 @@ struct Trip : Identifiable, Hashable{
         dict["name"] = self.name
         dict["first"] = self.nextArrivals[0]
         dict["second"] = self.nextArrivals[1]
+        dict["icon"] = self.iconName
         return dict
+    }
+}
+
+extension Trip {
+    static func placeholder() -> Trip{
+        Trip(id: UUID(), name: "Test", startPoint: Station(name: "Test", code: "Test"), endPoint: Station(name: "Test", code: "Test"), icon: "home")
     }
 }

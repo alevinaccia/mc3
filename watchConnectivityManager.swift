@@ -11,6 +11,7 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
     @Published var notificationName: NotificationMessage? = nil
     @Published var notificationFirst: NotificationMessage? = nil
     @Published var notificationSecond: NotificationMessage? = nil
+    @Published var notificationIcon: NotificationMessage? = nil
     
     
     private override init() {
@@ -50,6 +51,7 @@ extension WatchConnectivityManager: WCSessionDelegate {
             self?.notificationName = NotificationMessage(text: message["name"] as! String)
             self?.notificationFirst = NotificationMessage(text: message["first"] as! String)
             self?.notificationSecond = NotificationMessage(text: message["second"] as! String)
+            self?.notificationIcon = NotificationMessage(text: message["icon"] as! String)
         }
     }
     

@@ -1,0 +1,41 @@
+/*
+  Localizable.strings
+  mc3
+
+  Created by Audrey Huillard d aignaux on 28/02/23.
+  
+*/
+"Edit" = "Modifica";
+"Choose country" = "Scegli il paese";
+"Delete" = "Cancella";
+"Detect location" = "Rileva posizione";
+"Arrive" = "Arrivo";
+"You are" = "Tu sei";
+"Away from the station" = "Lontano dalla stazione";
+"Departure station" = "Stazione di partenza";
+"Arrival station" = "Stazione di arrivo";
+"From" = "Da";
+"Hello" = "Ciao";
+"Train Stations" = "Stazioni";
+"You’ll arrive at the station in" = "Arriverai in stazione in";
+"Search a station" = "Cerca una stazione";
+"Not implemented" = "Non implementato";
+"My favorite trips" = "I miei viaggi preferiti";
+"Get the next trains arriving at the nearest station around you" = "Prendi i prossimi treni alla stazione più vicina a te";
+"Home" = "Casa";
+"Refreshed at" = "Aggiornato alle";
+"My routes" = "I miei itinerari"
+"Create route" = "Crea eventi"
+"Done" = "Fatto"
+"Cancel" = "Cancella"
+"Select a tag" = "Inserisci tag"
+"Are you ready" = "Sei pronto?"
+"Start by adding your train routes" = "Inizia aggiungendo i tuoi itinerari"
+"Get started" = "Iniziamo"
+"Welcome to tracks" = "Benvenuto in Tracks"
+"Afraid of missing your train?" = "Paura di perdere il treno?"
+"Too busy to search for train infos?" = "Troppo occupato.a per cercare informazioni sul tuo treno?"
+"Don’t worry, Tracks is here to help you" = "Non preoccuparti, Tracks è qui per aiutarti"
+"Tracks provides you a smarter way to check your trains’ timetables, letting you wrap them in widgets, like the ones above for example." = "Tracks ti fornisce un modo migliore per controllare gli orari, inserirli in un widget come quello  nell’esempio."
+"To have an immersive experience of our services we also suggest you to download the Watch app!" = "Per una migliore esperienza dei nostri servizi ti consigliamo di scaricare anche la Watch App!"
+"Last update" = "Ultimo aggiornamento"

@@ -17,7 +17,7 @@ struct SelectedRouteView: View {
         VStack {
             HStack{
                 Spacer()
-                Image(systemName: "house")
+                Image(systemName: connectivityManager.notificationIcon?.text ?? "house")
                 Text(connectivityManager.notificationName?.text ?? "Home")
                     .fontWeight(.semibold)
                 Spacer()

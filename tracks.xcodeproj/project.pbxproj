@@ -28,6 +28,20 @@
 		3B8936B929B20A5100591672 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936B829B20A5100591672 /* firstView.swift */; };
 		3B8936BB29B2157A00591672 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BA29B2157A00591672 /* secondView.swift */; };
 		3B8936BD29B728A000591672 /* thirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BC29B728A000591672 /* thirdView.swift */; };
+		C000A84129B8928B00FDCC59 /* CardWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84029B8928B00FDCC59 /* CardWidgetView.swift */; };
+		C000A84229B8928B00FDCC59 /* CardWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84029B8928B00FDCC59 /* CardWidgetView.swift */; };
+		C000A84329B8933800FDCC59 /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
+		C000A84429B8934200FDCC59 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA500C29ADFB7F000DB962 /* ButtonView.swift */; };
+		C000A84829B8939E00FDCC59 /* RoutesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */; };
+		C000A84929B8939E00FDCC59 /* RoutesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */; };
+		C000A84B29B893B000FDCC59 /* RoutesMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */; };
+		C000A84C29B893B000FDCC59 /* RoutesMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */; };
+		C000A85129B894DA00FDCC59 /* CardWidgetSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A85029B894DA00FDCC59 /* CardWidgetSmallView.swift */; };
+		C000A85229B894DA00FDCC59 /* CardWidgetSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A85029B894DA00FDCC59 /* CardWidgetSmallView.swift */; };
+		C000A85329B8965E00FDCC59 /* RoutesMediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */; };
+		C000A85829B8A3CD00FDCC59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C000A85C29B8A3CD00FDCC59 /* Localizable.strings */; };
+		C000A85929B8A3CD00FDCC59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C000A85C29B8A3CD00FDCC59 /* Localizable.strings */; };
+		C000A85A29B8A3CD00FDCC59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C000A85C29B8A3CD00FDCC59 /* Localizable.strings */; };
 		C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */; };
 		C008FC7329B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */; };
 		C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BDD6629A8C9BF009254A3 /* tripCard.swift */; };
@@ -128,6 +142,13 @@
 		3B8936B829B20A5100591672 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
 		3B8936BA29B2157A00591672 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		3B8936BC29B728A000591672 /* thirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdView.swift; sourceTree = "<group>"; };
+		C000A84029B8928B00FDCC59 /* CardWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidgetView.swift; sourceTree = "<group>"; };
+		C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesWidgetView.swift; sourceTree = "<group>"; };
+		C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesMediumWidgetView.swift; sourceTree = "<group>"; };
+		C000A85029B894DA00FDCC59 /* CardWidgetSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidgetSmallView.swift; sourceTree = "<group>"; };
+		C000A85B29B8A3CD00FDCC59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C000A85D29B8A3E200FDCC59 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C000A85E29B8A3E400FDCC59 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchConnectivityManager.swift; sourceTree = "<group>"; };
 		C00BDD6629A8C9BF009254A3 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = tripCard.swift; path = ../../tripCard.swift; sourceTree = "<group>"; };
 		C00BDD6C29A8CA1D009254A3 /* MyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +233,17 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		C000A84F29B8946F00FDCC59 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */,
+				C000A85029B894DA00FDCC59 /* CardWidgetSmallView.swift */,
+				C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */,
+				C000A84029B8928B00FDCC59 /* CardWidgetView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		C00BDD6529A8C975009254A3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +278,7 @@
 			children = (
 				C00BDD8229A8CAAB009254A3 /* SmallWidgetView.swift */,
 				C00BDD8429A8CAE3009254A3 /* MediumWidgetView.swift */,
+				C000A84F29B8946F00FDCC59 /* SubViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +286,7 @@
 		C0109DF4299E43850075F6D1 = {
 			isa = PBXGroup;
 			children = (
+				C000A85C29B8A3CD00FDCC59 /* Localizable.strings */,
 				C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */,
 				C0109DFF299E43850075F6D1 /* tracks */,
 				C00BDD7229A8CA1D009254A3 /* MyWidget */,
@@ -420,6 +454,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				it,
 			);
 			mainGroup = C0109DF4299E43850075F6D1;
 			productRefGroup = C0109DFE299E43850075F6D1 /* Products */;
@@ -439,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0577D4A29ADEDEA005619F4 /* Assets.xcassets in Resources */,
+				C000A85A29B8A3CD00FDCC59 /* Localizable.strings in Resources */,
 				2A889BE229A8D6430077BE2B /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0577D4C29ADEE0D005619F4 /* Assets.xcassets in Resources */,
+				C000A85929B8A3CD00FDCC59 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0577D4D29ADEE97005619F4 /* Assets.xcassets in Resources */,
+				C000A85829B8A3CD00FDCC59 /* Localizable.strings in Resources */,
 				C0109E08299E43870075F6D1 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +511,7 @@
 				3B863D4E29AE19F700B606AE /* Station.swift in Sources */,
 				C01F723D29AD172F00522F3F /* Trip.swift in Sources */,
 				2ADA500D29ADFB7F000DB962 /* ButtonView.swift in Sources */,
+				C000A85329B8965E00FDCC59 /* RoutesMediumWidgetView.swift in Sources */,
 				2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */,
 				2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */,
 				C01F724029AD172F00522F3F /* TrainStatus.swift in Sources */,
@@ -495,10 +535,14 @@
 				C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */,
 				C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */,
 				C04CF00A29A8CCC800917586 /* apiController.swift in Sources */,
+				C000A84929B8939E00FDCC59 /* RoutesWidgetView.swift in Sources */,
+				C000A84C29B893B000FDCC59 /* RoutesMediumWidgetView.swift in Sources */,
+				C000A85229B894DA00FDCC59 /* CardWidgetSmallView.swift in Sources */,
 				C01F723C29AD172F00522F3F /* Trip.swift in Sources */,
 				C01F723F29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C06A8D9A29B5DC8C008BE0C2 /* tripController.swift in Sources */,
 				3B863D4D29AE19F700B606AE /* Station.swift in Sources */,
+				C000A84229B8928B00FDCC59 /* CardWidgetView.swift in Sources */,
 				C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,13 +559,19 @@
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
 				C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */,
 				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
+				C000A84429B8934200FDCC59 /* ButtonView.swift in Sources */,
+				C000A84329B8933800FDCC59 /* RoutesView.swift in Sources */,
 				3B8936BD29B728A000591672 /* thirdView.swift in Sources */,
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,
 				C00BDD8D29A8CBC8009254A3 /* SmallWidgetView.swift in Sources */,
 				C0109E03299E43850075F6D1 /* ContentView.swift in Sources */,
+				C000A84B29B893B000FDCC59 /* RoutesMediumWidgetView.swift in Sources */,
 				3B8936BB29B2157A00591672 /* secondView.swift in Sources */,
+				C000A85129B894DA00FDCC59 /* CardWidgetSmallView.swift in Sources */,
+				C000A84129B8928B00FDCC59 /* CardWidgetView.swift in Sources */,
 				3B863D4C29AE19F700B606AE /* Station.swift in Sources */,
 				3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */,
+				C000A84829B8939E00FDCC59 /* RoutesWidgetView.swift in Sources */,
 				C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */,
 				3B8936B929B20A5100591672 /* firstView.swift in Sources */,
 				C01F724129AD172F00522F3F /* Stop.swift in Sources */,
@@ -549,6 +599,19 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		C000A85C29B8A3CD00FDCC59 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C000A85B29B8A3CD00FDCC59 /* en */,
+				C000A85D29B8A3E200FDCC59 /* fr */,
+				C000A85E29B8A3E400FDCC59 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		2A889BE729A8D6430077BE2B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -560,7 +623,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = Y5P2U42H49;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
@@ -592,7 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = Y5P2U42H49;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
@@ -622,7 +685,7 @@
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y5P2U42H49;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
@@ -650,7 +713,7 @@
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y5P2U42H49;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
@@ -794,7 +857,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = Y5P2U42H49;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tracks/Info.plist;
@@ -826,7 +889,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = Y5P2U42H49;
+				DEVELOPMENT_TEAM = 7272LWF3H8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tracks/Info.plist;

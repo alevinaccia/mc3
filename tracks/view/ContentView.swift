@@ -36,17 +36,13 @@ struct ContentView: View {
                 Text("Last update : \(tripVM.lastUpdate)")
             }
             .refreshable {
-                
                 Task{
-                    if(tripVM.userTrips.isEmpty){
-                        print("userTrips vuoto")
-                    }else{
+                    if !tripVM.userTrips.isEmpty{
                         await tripVM.updateTrips()
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
                         print("done")
                     }
                 }
-                
             }
             .task {
                 
