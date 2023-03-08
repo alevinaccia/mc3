@@ -19,12 +19,14 @@ struct ContentView: View {
         
         NavigationView {
             VStack{
-                ForEach(0..<4) { i in
+                ForEach(0..<3) { i in
                     if(tripVM.userTrips.isEmpty){
-                        CardViewEmpty(showingSheet: $showingSheet)
+                        CardViewEmpty(showingSheet: $showingSheet).padding()
                     }
                     else if (i < tripVM.userTrips.count){
-                        CardView(trip: $tripVM.userTrips[i]).contextMenu {
+                        CardView(trip: $tripVM.userTrips[i])
+                            .padding()
+                            .contextMenu {
                             Button {
                                 print("Change country setting")
                             } label: {
