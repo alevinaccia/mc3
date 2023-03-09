@@ -10,8 +10,8 @@ struct searchTrip: View {
     
     @State var selectedFirstBar : Bool = false
     @State var selectedSecondBar : Bool = false
-    @State var startingPoint : String = "Stazione di partenza"
-    @State var endingPoint : String = "Stazione di arrivo"
+    @State var startingPoint : String = "..." //"Stazione di partenza"
+    @State var endingPoint : String = "..."//"Stazione di arrivo"
     
     @Binding var tagName: String
     @Binding var iconName: String

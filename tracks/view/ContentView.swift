@@ -37,7 +37,7 @@ struct ContentView: View {
                         CardViewEmpty(showingSheet: $showingSheet).padding()
                     }
                 }
-                Text("Last update : \(tripVM.lastUpdate)")
+                Text("Last Update:\(tripVM.lastUpdate)")
             }
             .refreshable {
                 Task{

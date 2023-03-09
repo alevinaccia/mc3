@@ -1,23 +1,19 @@
-/*
-  Localizable.strings
-  mc3
-
-  Created by Audrey Huillard d aignaux on 28/02/23.
-  
-*/
 "Edit" = "Modifier";
 "Choose country" = "Choisir le pays";
 "Delete" = "Supprimer";
 "Detect location" = "Détecter la localisation";
 "Arrive" = "Arrive";
-"You are" = "Vous êtes";
-"Away from the station" = "De la station";
-"Departure station" = "Station de départ";
-"Arrival station" = "Station d’arrivée";
+"in attesa di inserimento" = "en attente d'informations";
+"to:" = "de:";
+"from" = "de";
+"You are " = "Vous êtes";
+"away from the station" = "De la station";
+"Stazione di partenza" = "Station de départ";
+"Stazione di arrivo" = "Station d’arrivée";
 "From" = "De";
 "Hello" = "Bonjour";
 "Train Stations" = "Stations";
-"You’ll arrive at the station in" = "Vous arriverez à la station dans";
+"You’ll arrive at the station in:" = "Vous arriverez à la station dans:";
 "Search a station" = "Chercher une station";
 "Not implemented" = "Non géré";
 "My favorite trips" = "Mes trajets favoris";
@@ -25,18 +21,22 @@
 "Home" = "Maison";
 "Refreshed at" = "Mis à jour";
 "My routes" = "Mes itinéraires";
-"Create route" = "Créer un itinéraire";
+"Create Route" = "Créer un itinéraire";
 "Done" = "Fait";
 "Cancel" = "Annuler";
-"Select a tag" = "Choisir un tag";
-"Are you ready" = "Êtes-vous prêt?";
-"Start by adding your train routes" = "Commencer par ajouter vos itinéraires";
+"Inserisci tag" = "Choisir un tag";
+"Are you ready?" = "Êtes-vous prêt?";
+"Start by adding your train routes." = "Commencer par ajouter vos itinéraires.";
 "Get started" = "Commencer";
-"Welcome to tracks" = "Bienvenue sur Tracks";
-"Afraid of missing your train?" = "Peur de rater votre train?";
-"Too busy to search for train infos?" = "Trop occupé.e pour chercher les informations des trains";
-"Don’t worry, Tracks is here to help you" = "Ne vous en faites pas, Tracks va vous aider";
+"Welcome to TRACKS!" = "Bienvenue sur TRACKS!";
+"Afraid of missing your train?" = "Peur de rater votre train? ";
+"Too busy to search for train infos?" = "Trop occupé.e pour chercher les informations des trains ";
+"Don’t worry, Tracks is here to help you!" = "Ne vous en faites pas, Tracks va vous aider! ";
 "Tracks provides you a smarter way to check your trains’ timetables, letting you wrap them in widgets, like the ones above for example." = "Tracks vous permet intuitivement de vérifier les horaires des trains, en installant des widgets, comme l’exemple ci-dessus";
 "To have an immersive experience of our services we also suggest you to download the Watch app!" = "Pour avoir une experience immersive de nos services, nous vous suggérons également de télécharger l’app pour l’Apple Watch!";
-"Last update" = "Dernière mise à jour";
-
+"Last Update:" = "Dernière mise à jour:";
+"Last update " = "Dernière mise à jour ";
+"Loading..." = "Chargement...";
+"Ci sono delle tratte!" = "Il y a des trajets!";
+"Non ci sono delle tratte!" = "Il n'y a pas de trajet!";
+"Get Started" = "Commencer";
