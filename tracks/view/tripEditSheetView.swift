@@ -30,7 +30,7 @@ struct tripEditSheetView: View {
                 searchTrip(firstStation: $startPoint, secondStation: $endPoint, possibleTrips: $possibileTrips, tagName: $tagName, iconName: $iconName, flagTextField1: $flagTextField1, flagTextField2: $flagTextField2, flagWaitResults: $flagWaitResults)
                 
                 
-            }.navigationBarTitle("Create Event", displayMode: .inline)
+            }.navigationBarTitle("Create Route", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
                     Task {
 //                        print("1 \(flagTextField1)")

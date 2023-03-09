@@ -35,8 +35,6 @@ struct onboardingView: View {
 }
 
 struct lastPageView: View {
-    let text1: String = "Are you ready?"
-    let text2: String = "Start by adding your train routes."
     let showDismissButton: Bool
     
     @Binding var shouldShowOnboarding: Bool
@@ -49,10 +47,10 @@ struct lastPageView: View {
             VStack {
                 Spacer()
                 VStack{
-                    Text (text1)
+                    Text ("Are you ready?")
                         .font(.headline)
                     
-                    Text (text2)
+                    Text ("Start by adding your train routes.")
                         .font(.headline)
                         .padding()
                 }.padding(.bottom,150)

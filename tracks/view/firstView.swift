@@ -18,8 +18,8 @@ struct firstView: View {
                 Text("Welcome to TRACKS!")
                     .bold()
                     .font(.system(size: 34))
-                Text("Afraid of missing your train? ")
-                Text("Too busy to search for train infos? ")
+                Text("Afraid of missing your train?")
+                Text("Too busy to search for train infos?")
                 Text("Don’t worry, Tracks is here to help you!")
             }
         }.ignoresSafeArea()

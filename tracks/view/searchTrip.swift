@@ -152,12 +152,12 @@ struct searchTrip: View {
                     else if (!possibleTrips.isEmpty) {
                         //ci sono delle tratte tra le due selezionate
                         VStack{
-                            Text("Ci sono delle tratte") + Text(Image(systemName: "checkmark.seal.fill"))
+                            Text("Ci sono delle tratte!") + Text(Image(systemName: "checkmark.seal.fill"))
                         }
                     } else {
                         //non ci sono delle tratte
                         VStack{
-                            Text("Non ci sono delle tratte")
+                            Text("Non ci sono delle tratte!")
                         }
                     }
                 }                .padding()
