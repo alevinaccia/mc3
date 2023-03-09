@@ -28,8 +28,6 @@
 		3B8936B929B20A5100591672 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936B829B20A5100591672 /* firstView.swift */; };
 		3B8936BB29B2157A00591672 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BA29B2157A00591672 /* secondView.swift */; };
 		3B8936BD29B728A000591672 /* thirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8936BC29B728A000591672 /* thirdView.swift */; };
-		C000A84129B8928B00FDCC59 /* CardWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84029B8928B00FDCC59 /* CardWidgetView.swift */; };
-		C000A84229B8928B00FDCC59 /* CardWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84029B8928B00FDCC59 /* CardWidgetView.swift */; };
 		C000A84329B8933800FDCC59 /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
 		C000A84429B8934200FDCC59 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA500C29ADFB7F000DB962 /* ButtonView.swift */; };
 		C000A84829B8939E00FDCC59 /* RoutesWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */; };
@@ -142,7 +140,6 @@
 		3B8936B829B20A5100591672 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
 		3B8936BA29B2157A00591672 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		3B8936BC29B728A000591672 /* thirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdView.swift; sourceTree = "<group>"; };
-		C000A84029B8928B00FDCC59 /* CardWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidgetView.swift; sourceTree = "<group>"; };
 		C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesWidgetView.swift; sourceTree = "<group>"; };
 		C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesMediumWidgetView.swift; sourceTree = "<group>"; };
 		C000A85029B894DA00FDCC59 /* CardWidgetSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidgetSmallView.swift; sourceTree = "<group>"; };
@@ -239,7 +236,6 @@
 				C000A84729B8939E00FDCC59 /* RoutesWidgetView.swift */,
 				C000A85029B894DA00FDCC59 /* CardWidgetSmallView.swift */,
 				C000A84A29B893B000FDCC59 /* RoutesMediumWidgetView.swift */,
-				C000A84029B8928B00FDCC59 /* CardWidgetView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -542,7 +538,6 @@
 				C01F723F29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C06A8D9A29B5DC8C008BE0C2 /* tripController.swift in Sources */,
 				3B863D4D29AE19F700B606AE /* Station.swift in Sources */,
-				C000A84229B8928B00FDCC59 /* CardWidgetView.swift in Sources */,
 				C00BDD8929A8CBB2009254A3 /* MediumWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +563,6 @@
 				C000A84B29B893B000FDCC59 /* RoutesMediumWidgetView.swift in Sources */,
 				3B8936BB29B2157A00591672 /* secondView.swift in Sources */,
 				C000A85129B894DA00FDCC59 /* CardWidgetSmallView.swift in Sources */,
-				C000A84129B8928B00FDCC59 /* CardWidgetView.swift in Sources */,
 				3B863D4C29AE19F700B606AE /* Station.swift in Sources */,
 				3B863D4229A8D03E00B606AE /* iconSelector.swift in Sources */,
 				C000A84829B8939E00FDCC59 /* RoutesWidgetView.swift in Sources */,
@@ -623,7 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
@@ -655,7 +649,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tracks;
@@ -685,7 +679,7 @@
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
@@ -713,7 +707,7 @@
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/avinaccia/Documents/mc3/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyWidget;
@@ -857,7 +851,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tracks/Info.plist;
@@ -889,7 +883,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 7272LWF3H8;
+				DEVELOPMENT_TEAM = Y5P2U42H49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tracks/Info.plist;

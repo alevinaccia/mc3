@@ -48,13 +48,14 @@ struct lastPageView: View {
                 .scaledToFill()
             VStack {
                 Spacer()
-                Text (text1)
-                    .font(.headline)
-                
-                Text (text2)
-                    .font(.headline)
-                    .padding()
-
+                VStack{
+                    Text (text1)
+                        .font(.headline)
+                    
+                    Text (text2)
+                        .font(.headline)
+                        .padding()
+                }.padding(.bottom,150)
                 
                 if showDismissButton {
                     Button (action: {
