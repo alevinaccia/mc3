@@ -19,7 +19,11 @@ class TripViewModel: ObservableObject{
     func saveJsonFile(newSavedTrip : SavedTrip) async {
         savedTrips.append(newSavedTrip)
         writeData(savedTrips: savedTrips)
-        await self.generateTrips()
+        do{
+            try await self.generateTrips()
+        }catch{
+            print(error)
+        }
     }
     
     func writeData(savedTrips : [SavedTrip]) -> Void {
@@ -58,7 +62,7 @@ class TripViewModel: ObservableObject{
             
             TripViewModel.shared.savedTrips = arrayTrips
             
-            await self.generateTrips()
+            try await self.generateTrips()
             
         } catch {
             throw error
@@ -81,17 +85,21 @@ class TripViewModel: ObservableObject{
         do {
             self.writeData(savedTrips: savedTrips)
             try await self.readData()
-            await self.generateTrips()
+            try await self.generateTrips()
         } catch {
             print("rrorr")
         }
         
     }
     
-    func generateTrips() async{
-        userTrips = []
+    func generateTrips() async throws {
+        DispatchQueue.main.async {
+            self.userTrips = []
+        }
         for savedTrip in savedTrips {
-            let newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint, icon: savedTrip.iconName)
+            let codeReg = try await ApiController.shared.getRegionCode(codeStat: savedTrip.startPoint.code)
+            let coordinatesTmp = try await ApiController.shared.getCoordinates(codeStat: savedTrip.startPoint.code, codReg: codeReg)
+            let newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint, icon: savedTrip.iconName, coordinatesStartingPoint: coordinatesTmp)
             userTrips.append(newTrip)
         }
         await self.updateTrips()

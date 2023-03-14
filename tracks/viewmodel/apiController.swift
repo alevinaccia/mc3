@@ -22,7 +22,39 @@ class ApiController {
     let findTrainUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/cercaNumeroTrenoTrenoAutocomplete/")!
     let trainStatusUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/andamentoTreno/")!
     let researchUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/autocompletaStazione/")!
-    let deprturesUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/partenze/")!
+    let departuresUrl : URL = URL(string: "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/partenze/")!
+    
+    //per prendere lat e lon
+    let locationUrl : URL = URL(string:
+    "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/dettaglioStazione/")! //dopo vuole il codice stazione e il codice regione
+    
+    //per avere il codice regione
+    let regionCodeUrl : URL = URL(string:
+    "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/regione/")! //dopo vuole il codice stazione
+    
+    func getCoordinates(codeStat: String, codReg: String) async throws -> Coordinates{
+            let request = URLRequest(url: locationUrl
+                .appendingPathComponent(codeStat)
+                .appendingPathComponent(codReg))
+            let (data, _) = try await URLSession.shared.data(for: request)
+            let res = try JSONDecoder().decode(Coordinates.self, from: data)
+            return res
+    }
+    
+    func getRegionCode(codeStat: String) async throws -> String{
+        do{
+            let request = URLRequest(url: regionCodeUrl
+                .appendingPathComponent(codeStat))
+            let (data, _) = try await URLSession.shared.data(for: request)
+            
+            let stringInt = String.init(data: data, encoding: String.Encoding.utf8)
+            //let regionCode = Int.init(stringInt ?? "")
+            return stringInt ?? ""
+        }catch{
+            print("error Code Region")
+            throw error
+        }
+    }
     
     func getTrainInfo(code : String) async throws -> trainInfo? {
         do {
@@ -72,7 +104,7 @@ class ApiController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM d yyyy HH:mm:ss"
             let dateString = dateFormatter.string(from: Date())
-            let request = URLRequest(url: deprturesUrl.appendingPathComponent(from).appendingPathComponent(dateString))
+            let request = URLRequest(url: departuresUrl.appendingPathComponent(from).appendingPathComponent(dateString))
             let (data, _) = try await URLSession.shared.data(for: request)
             //decode data
             let departures = try JSONDecoder().decode([testStruct].self, from: data)

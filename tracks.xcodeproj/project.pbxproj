@@ -15,6 +15,9 @@
 		2ADA500B29ADFAD1000DB962 /* RoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD4386B29ACAC6E000B19CD /* RoutesView.swift */; };
 		2ADA500D29ADFB7F000DB962 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA500C29ADFB7F000DB962 /* ButtonView.swift */; };
 		2ADA500E29ADFBFA000DB962 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA500C29ADFB7F000DB962 /* ButtonView.swift */; };
+		3B129C3629BF98A100C09DE2 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129C3529BF98A100C09DE2 /* Coordinates.swift */; };
+		3B40628F29C073D300CBDB4E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129C3529BF98A100C09DE2 /* Coordinates.swift */; };
+		3B40629029C073DE00CBDB4E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129C3529BF98A100C09DE2 /* Coordinates.swift */; };
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
@@ -129,6 +132,7 @@
 		2A889BE129A8D6430077BE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AD4386B29ACAC6E000B19CD /* RoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesView.swift; sourceTree = "<group>"; };
 		2ADA500C29ADFB7F000DB962 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		3B129C3529BF98A100C09DE2 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
 		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
@@ -360,6 +364,7 @@
 				C01F723A29AD172F00522F3F /* Stop.swift */,
 				3B863D4929AE16D100B606AE /* SavedTrip.swift */,
 				3B863D4B29AE19F700B606AE /* Station.swift */,
+				3B129C3529BF98A100C09DE2 /* Coordinates.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				2A889BDD29A8D6420077BE2B /* SelectedRouteView.swift in Sources */,
 				2A889BDB29A8D6420077BE2B /* TracksApp.swift in Sources */,
 				C01F724029AD172F00522F3F /* TrainStatus.swift in Sources */,
+				3B40628F29C073D300CBDB4E /* Coordinates.swift in Sources */,
 				C02662E329AD10E30071F9FA /* apiController.swift in Sources */,
 				C06A8D9829B5DB25008BE0C2 /* tripController.swift in Sources */,
 				C06A8D9929B5DBA6008BE0C2 /* SavedTrip.swift in Sources */,
@@ -527,6 +533,7 @@
 				C00BDD7429A8CA1D009254A3 /* MyWidgetBundle.swift in Sources */,
 				2AD4386D29ACAC6E000B19CD /* RoutesView.swift in Sources */,
 				2ADA500E29ADFBFA000DB962 /* ButtonView.swift in Sources */,
+				3B40629029C073DE00CBDB4E /* Coordinates.swift in Sources */,
 				C01F724229AD172F00522F3F /* Stop.swift in Sources */,
 				C00BDD7629A8CA1D009254A3 /* MyWidget.swift in Sources */,
 				C00BDD8829A8CBAF009254A3 /* SmallWidgetView.swift in Sources */,
@@ -555,6 +562,7 @@
 				C008FC7229B5FA3D00F7C034 /* watchConnectivityManager.swift in Sources */,
 				C00BDD6729A8C9BF009254A3 /* tripCard.swift in Sources */,
 				C000A84429B8934200FDCC59 /* ButtonView.swift in Sources */,
+				3B129C3629BF98A100C09DE2 /* Coordinates.swift in Sources */,
 				C000A84329B8933800FDCC59 /* RoutesView.swift in Sources */,
 				3B8936BD29B728A000591672 /* thirdView.swift in Sources */,
 				C01F723B29AD172F00522F3F /* Trip.swift in Sources */,

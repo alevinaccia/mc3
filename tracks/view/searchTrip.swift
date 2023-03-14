@@ -173,6 +173,14 @@ struct searchTrip: View {
         .padding(.top)
         .onChange(of: secondStation.name) { newValue in
             Task {
+                
+                var regCode = try await ApiController.shared.getRegionCode(codeStat: firstStation.code)
+                try await print("Codice Regione: \(regCode)")
+                
+                let coordinates = try await ApiController.shared.getCoordinates(codeStat: firstStation.code, codReg: regCode)
+                print("Coordinate \(coordinates)")
+                
+                
                 flagWaitResults = true
                 possibleTrips = try await ApiController.shared.getPossibleTrains(from: firstStation.code, to: secondStation.code)
                 flagWaitResults = false

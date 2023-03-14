@@ -32,6 +32,7 @@ struct ContentView: View {
                                 tripEditSheetView(startPoint: tripVM.userTrips[i].startPoint, endPoint: tripVM.userTrips[i].endPoint)
                             }
                         
+                        
                     }
                     else{
                         CardViewEmpty(showingSheet: $showingSheet).padding()
