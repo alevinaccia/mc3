@@ -11,7 +11,7 @@ import MapKit
 struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
-    @State var viewController = ViewController()
+    @StateObject var viewController = ContentViewModel()
     @StateObject var tripVM = TripViewModel.shared
     @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
     
@@ -22,13 +22,6 @@ struct ContentView: View {
     
     
     var body: some View {
-        Button {
-            viewController.viewDidLoad()
-        } label: {
-            Text("vediam")
-        }
-
-        
         NavigationView {
             ScrollView{
                 ForEach(0..<3) { i in
@@ -76,10 +69,17 @@ struct ContentView: View {
             }
             .navigationTitle("My routes")
         }.onAppear(){
-            //qua
-            viewController.viewDidLoad()
-            locManager.startUpdatingLocation()
-        }
+            if (viewController.checkIfLocationServicesIsEnabled()){
+                viewController.initLocation()
+            }
+        }.onChange(of: viewController.locationManager?.location?.coordinate.longitude, perform: {_ in
+            print("User Latitude \(viewController.getUserLocation().lat)")
+            print("User Longitude \(viewController.getUserLocation().lon)")
+            var coordinate1 = CLLocation(latitude: viewController.getUserLocation().lat, longitude: viewController.getUserLocation().lon)
+            var coordinate2 = CLLocation(latitude: 45.433866, longitude: 9.2391)
+            let distanceInMeters = coordinate1.distance(from: coordinate2) // result is in meters
+            print(distanceInMeters)
+        })
       
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             onboardingView(shouldShowOnboarding: $shouldShowOnboarding)

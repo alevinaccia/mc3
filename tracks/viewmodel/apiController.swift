@@ -66,6 +66,7 @@ class ApiController {
             return trainInfo(a: String(format[1]), b: String(format[2]))
         }
         catch {
+            print("error getTrainInfo")
             print(error)
         }
         return nil
@@ -79,6 +80,7 @@ class ApiController {
             return res
         }
         catch {
+            print("errore GetTrainStatus")
             print(error)
             throw error
         }
@@ -92,6 +94,7 @@ class ApiController {
             return res
         }
         catch {
+            print("error research")
             print(error)
             throw error
         }
@@ -128,6 +131,7 @@ class ApiController {
             return trips
         }
         catch {
+            print("error getPossibleTrain")
             print(error)
             throw error
         }
