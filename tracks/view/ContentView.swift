@@ -57,10 +57,11 @@ struct ContentView: View {
                 
                 do {
                     try await TripViewModel.shared.readData()
-                    if tripVM.userTrips.isEmpty {
+                    print(tripVM.userTrips)
+                    if !tripVM.userTrips.isEmpty {
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
                     }
-                        //TripViewModel.shared.clearData()
+                    //TripViewModel.shared.clearData()
                 }
                 catch {
                     TripViewModel.shared.userTrips = []
