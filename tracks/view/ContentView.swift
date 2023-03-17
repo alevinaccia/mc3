@@ -6,17 +6,28 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
+    @State var viewController = ViewController()
     @StateObject var tripVM = TripViewModel.shared
     @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
+    
+    var locManager = CLLocationManager()
     
     @State private var showingSheet = false
     
     
+    
     var body: some View {
+        Button {
+            viewController.viewDidLoad()
+        } label: {
+            Text("vediam")
+        }
+
         
         NavigationView {
             ScrollView{
@@ -64,6 +75,10 @@ struct ContentView: View {
                 
             }
             .navigationTitle("My routes")
+        }.onAppear(){
+            //qua
+            viewController.viewDidLoad()
+            locManager.startUpdatingLocation()
         }
       
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
