@@ -62,7 +62,9 @@ class ApiController {
             let (data, _) = try await URLSession.shared.data(for: request)
             let res = String(decoding: data, as: UTF8.self)
             var format = res.split(separator: "|")[1].split(separator: "-")
+            //print(String(format[2].removeLast()))
             format[2].removeLast()
+            //print(String(format[1]), String(format[2]))
             return trainInfo(a: String(format[1]), b: String(format[2]))
         }
         catch {
@@ -75,6 +77,7 @@ class ApiController {
         do {
             let request = URLRequest(url: trainStatusUrl.appendingPathComponent(trainInfo.a).appendingPathComponent(code).appendingPathComponent(trainInfo.b))
             let (data, _) = try await URLSession.shared.data(for: request)
+            //print(request)
             let res = try JSONDecoder().decode(TrainStatus.self, from: data)
             return res
         }
@@ -110,14 +113,16 @@ class ApiController {
             let departures = try JSONDecoder().decode([testStruct].self, from: data)
             
             for departure in departures {
-                var train : TrainStatus = try await getTrainStatus(trainInfo: await getTrainInfo(code: departure.trainCode)!, code: departure.trainCode)
+                var train : TrainStatus? = try await getTrainStatus(trainInfo: await getTrainInfo(code: departure.trainCode)!, code: departure.trainCode)
                 
-                if train.stops.contains(where: {$0.station.code ==  to}) && train.stops.firstIndex(where: {$0.station.code == to})! > train.stops.firstIndex(where: {$0.station.code == from})! && !train.departed {
-                    train.setTime(station: from)
-                    train.setTrack(track: departure.track ?? "-")
-                    
-                    if (Double(train.timeAtMyStation) > Date().timeIntervalSince1970) {
-                        trips.append(train)
+                if train != nil {
+                    if train!.stops.contains(where: {$0.station.code ==  to}) && train!.stops.firstIndex(where: {$0.station.code == to})! > train!.stops.firstIndex(where: {$0.station.code == from})! && !train!.departed {
+                        train!.setTime(station: from)
+                        train!.setTrack(track: departure.track ?? "-")
+                        
+                        if (Double(train!.timeAtMyStation) > Date().timeIntervalSince1970) {
+                            trips.append(train!)
+                        }
                     }
                 }
                 

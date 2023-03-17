@@ -22,13 +22,6 @@ struct ContentView: View {
     
     
     var body: some View {
-        Button {
-            viewController.viewDidLoad()
-        } label: {
-            Text("vediam")
-        }
-
-        
         NavigationView {
             ScrollView{
                 ForEach(0..<3) { i in
@@ -64,6 +57,7 @@ struct ContentView: View {
                 
                 do {
                     try await TripViewModel.shared.readData()
+                    print(tripVM.userTrips)
                     if !tripVM.userTrips.isEmpty {
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
                     }
