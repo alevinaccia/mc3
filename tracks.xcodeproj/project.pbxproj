@@ -18,6 +18,7 @@
 		3B129C3629BF98A100C09DE2 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129C3529BF98A100C09DE2 /* Coordinates.swift */; };
 		3B40628F29C073D300CBDB4E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129C3529BF98A100C09DE2 /* Coordinates.swift */; };
 		3B40629029C073DE00CBDB4E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B129C3529BF98A100C09DE2 /* Coordinates.swift */; };
+		3B40629429C1E08F00CBDB4E /* viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40629329C1E08F00CBDB4E /* viewController.swift */; };
 		3B863D3829A60FAB00B606AE /* View+Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3729A60FAB00B606AE /* View+Shape.swift */; };
 		3B863D3A29A6370800B606AE /* tripCardEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3929A6370800B606AE /* tripCardEmpty.swift */; };
 		3B863D3C29A7698D00B606AE /* tripEditSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */; };
@@ -133,6 +134,7 @@
 		2AD4386B29ACAC6E000B19CD /* RoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesView.swift; sourceTree = "<group>"; };
 		2ADA500C29ADFB7F000DB962 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		3B129C3529BF98A100C09DE2 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		3B40629329C1E08F00CBDB4E /* viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController.swift; sourceTree = "<group>"; };
 		3B863D3729A60FAB00B606AE /* View+Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Shape.swift"; sourceTree = "<group>"; };
 		3B863D3929A6370800B606AE /* tripCardEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCardEmpty.swift; sourceTree = "<group>"; };
 		3B863D3B29A7698D00B606AE /* tripEditSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripEditSheetView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				C09DF9E9299F74E3007EE4FD /* apiController.swift */,
 				3B863D4729ADFB6700B606AE /* tripController.swift */,
+				3B40629329C1E08F00CBDB4E /* viewController.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				C01F723E29AD172F00522F3F /* TrainStatus.swift in Sources */,
 				C00BDD8C29A8CBC6009254A3 /* MediumWidgetView.swift in Sources */,
 				3B863D4A29AE16D100B606AE /* SavedTrip.swift in Sources */,
+				3B40629429C1E08F00CBDB4E /* viewController.swift in Sources */,
 				C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */,
 				3B863D4829ADFB6700B606AE /* tripController.swift in Sources */,
 				C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */,
