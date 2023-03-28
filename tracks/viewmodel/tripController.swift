@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class TripViewModel: ObservableObject{
     
     static var shared : TripViewModel = TripViewModel()
@@ -60,7 +61,10 @@ class TripViewModel: ObservableObject{
             
             let arrayTrips = try JSONDecoder().decode([SavedTrip].self, from: data)
             
-            TripViewModel.shared.savedTrips = arrayTrips
+            await MainActor.run(body: {
+                TripViewModel.shared.savedTrips = arrayTrips
+            })
+            
             
             try await self.generateTrips()
             
@@ -73,10 +77,28 @@ class TripViewModel: ObservableObject{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         
-        for index in userTrips.indices {
-            await userTrips[index].updateTrips()
+//        for index in userTrips.indices {
+//            await userTrips[index].updateTrips()
+//        }
+
+        let updatedTrips = await withTaskGroup(of: Trip.self) { taskGroup -> [Trip] in
+            for index in userTrips.indices{
+                taskGroup.addTask {
+                    await Trip.updateT(t: self.userTrips[index])
+                }
+            }
+            var collected = [Trip]()
+
+            for await value in taskGroup {
+                collected.append(value)
+            }
+            return collected
         }
-        self.lastUpdate = dateFormatter.string(from: Date())
+        
+        DispatchQueue.main.async {
+            self.userTrips = updatedTrips
+            self.lastUpdate = dateFormatter.string(from: Date())
+        }
     }
     
     func deleteTrip(id : UUID) async throws {
@@ -92,7 +114,15 @@ class TripViewModel: ObservableObject{
         
     }
     
+    func setTrips(t : [Trip]){
+        DispatchQueue.main.async {
+            self.userTrips = t
+        }
+        
+    }
+    
     func generateTrips() async throws {
+        var test : [Trip] = []
         DispatchQueue.main.async {
             self.userTrips = []
         }
@@ -100,8 +130,10 @@ class TripViewModel: ObservableObject{
             let codeReg = try await ApiController.shared.getRegionCode(codeStat: savedTrip.startPoint.code)
             let coordinatesTmp = try await ApiController.shared.getCoordinates(codeStat: savedTrip.startPoint.code, codReg: codeReg)
             let newTrip = Trip(id: savedTrip.id, name: savedTrip.name, startPoint: savedTrip.startPoint, endPoint: savedTrip.endPoint, icon: savedTrip.iconName, coordinatesStartingPoint: coordinatesTmp)
-            userTrips.append(newTrip)
+            test.append(newTrip)
         }
+        
+        self.setTrips(t: test)
         await self.updateTrips()
     }
 }

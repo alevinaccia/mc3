@@ -57,7 +57,6 @@ struct ContentView: View {
                 
                 do {
                     try await TripViewModel.shared.readData()
-                    print(tripVM.userTrips)
                     if !tripVM.userTrips.isEmpty {
                         WatchConnectivityManager.shared.send(tripVM.userTrips[0].toDictionary())
                     }
@@ -76,8 +75,8 @@ struct ContentView: View {
         }.onChange(of: viewController.locationManager?.location?.coordinate.longitude, perform: {_ in
             print("User Latitude \(viewController.getUserLocation().lat)")
             print("User Longitude \(viewController.getUserLocation().lon)")
-            var coordinate1 = CLLocation(latitude: viewController.getUserLocation().lat, longitude: viewController.getUserLocation().lon)
-            var coordinate2 = CLLocation(latitude: 45.433866, longitude: 9.2391)
+            let coordinate1 = CLLocation(latitude: viewController.getUserLocation().lat, longitude: viewController.getUserLocation().lon)
+            let coordinate2 = CLLocation(latitude: 45.433866, longitude: 9.2391)
             let distanceInMeters = coordinate1.distance(from: coordinate2) // result is in meters
             print(distanceInMeters)
         })
