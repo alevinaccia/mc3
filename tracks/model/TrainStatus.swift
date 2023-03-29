@@ -36,6 +36,17 @@ struct TrainStatus: Decodable, Hashable {
         self.timeAtMyStation = 0
     }
     
+    init(){
+        self.departStation = ""
+        self.arrivalStation = ""
+        self.trainNumber = 0
+        self.delay = 0
+        self.stops = []
+        self.departed = false
+        self.timeAtMyStation = 0
+        self.track = ""
+    }
+    
     init(departStation : String, arrivalStation : String, trainNumber : Int, delay : Int, stops : [Stop], departed : Bool, time : Int, track : String) {
         self.departStation = departStation
         self.arrivalStation = arrivalStation

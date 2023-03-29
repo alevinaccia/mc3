@@ -76,10 +76,6 @@ class TripViewModel: ObservableObject{
     func updateTrips() async {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
-        
-//        for index in userTrips.indices {
-//            await userTrips[index].updateTrips()
-//        }
 
         let updatedTrips = await withTaskGroup(of: Trip.self) { taskGroup -> [Trip] in
             for index in userTrips.indices{

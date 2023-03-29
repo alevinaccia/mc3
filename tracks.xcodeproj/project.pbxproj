@@ -79,6 +79,8 @@
 		C06A8D9A29B5DC8C008BE0C2 /* tripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4729ADFB6700B606AE /* tripController.swift */; };
 		C06A8D9B29B5DC90008BE0C2 /* SavedTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B863D4929AE16D100B606AE /* SavedTrip.swift */; };
 		C06A8D9D29B5DD5D008BE0C2 /* timeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A8D9C29B5DD5D008BE0C2 /* timeComponent.swift */; };
+		C074820729D3445A002158ED /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C074820629D3445A002158ED /* readme.md */; };
+		C074820829D3445A002158ED /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C074820629D3445A002158ED /* readme.md */; };
 		C085DEBB29A4C14100DE5B28 /* searchTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEBA29A4C14100DE5B28 /* searchTrip.swift */; };
 		C085DEC129A77A4400DE5B28 /* tripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085DEC029A77A4400DE5B28 /* tripCard.swift */; };
 		C09DF9EA299F74E3007EE4FD /* apiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DF9E9299F74E3007EE4FD /* apiController.swift */; };
@@ -174,6 +176,7 @@
 		C01F724429AD174C00522F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Tracks Watch App/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		C0577D4B29ADEE0D005619F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = tracks/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C06A8D9C29B5DD5D008BE0C2 /* timeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeComponent.swift; sourceTree = "<group>"; };
+		C074820629D3445A002158ED /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		C085DEBA29A4C14100DE5B28 /* searchTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTrip.swift; sourceTree = "<group>"; };
 		C085DEC029A77A4400DE5B28 /* tripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tripCard.swift; sourceTree = "<group>"; };
 		C09DF9E9299F74E3007EE4FD /* apiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiController.swift; sourceTree = "<group>"; };
@@ -288,6 +291,7 @@
 		C0109DF4299E43850075F6D1 = {
 			isa = PBXGroup;
 			children = (
+				C074820629D3445A002158ED /* readme.md */,
 				C000A85C29B8A3CD00FDCC59 /* Localizable.strings */,
 				C008FC7129B5FA3D00F7C034 /* watchConnectivityManager.swift */,
 				C0109DFF299E43850075F6D1 /* tracks */,
@@ -480,6 +484,7 @@
 			files = (
 				C0577D4A29ADEDEA005619F4 /* Assets.xcassets in Resources */,
 				C000A85A29B8A3CD00FDCC59 /* Localizable.strings in Resources */,
+				C074820829D3445A002158ED /* readme.md in Resources */,
 				2A889BE229A8D6430077BE2B /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +504,7 @@
 			files = (
 				C0577D4D29ADEE97005619F4 /* Assets.xcassets in Resources */,
 				C000A85829B8A3CD00FDCC59 /* Localizable.strings in Resources */,
+				C074820729D3445A002158ED /* readme.md in Resources */,
 				C0109E08299E43870075F6D1 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
